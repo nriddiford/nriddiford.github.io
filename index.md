@@ -22,4 +22,4 @@ This is where we can showcase our exhibition
 
 # Contact
 
-Please feel free to [contact us](mailto:nick.riddiford@curie.fr)
+Please feel free to [contact us](mailto:nick.riddiford@curie.fr) if you have any questions about our project
