@@ -1,15 +1,11 @@
-# Actin Art
-
-Here is a placeholder for the Actin Art project
-
-## About
+# About
 
 This is where we can write a description about the project
 
-## Books
+# Books
 
 This is where we can showcase our ongoing projects
 
-## People
+# People
 
 This is where we can give some details about who's involved in this project! 
