@@ -22,4 +22,4 @@ This is where we can showcase our exhibition
 
 # Contact
 
-Please feel free to e-mail us at address@gmail.com
+Please feel free to [Contact us](@address@gmail.com)
