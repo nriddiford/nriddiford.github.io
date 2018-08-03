@@ -2,6 +2,14 @@
 
 This is where we can write a description about the project
 
+# People
+
+The main people involved in the project
+
+# Ateliers 
+
+This is where we can talk about out school events
+
 # Books
 
 This is where we can showcase our ongoing projects
@@ -10,10 +18,8 @@ This is where we can showcase our ongoing projects
 
 This is where we can showcase our exhibition
 
-# Atteliers 
 
-This is where we can talk about out school events
 
-# People
+# Contact
 
-This is where we can give some details about who's involved in this project! 
+Please feel free to e-mail us at address@gmail.com
