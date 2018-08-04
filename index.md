@@ -6,7 +6,7 @@ As the science is accurate, the parents and teachers reading the stories to the 
 # People
 We are a group of scientists, mostly based at the Institut Curie in Paris, who have a passion for communicating our work to the general public.
 
-**Olga Markova** - Founder     
+**Olga Markova** - Founder  
 **Judith Mine-Hattab** - Treasurer   
 **Angela Bellini**  - Vice-president    
 **Marine Stefanutti** - Secretary   
@@ -26,6 +26,6 @@ To complement the books we are publishing, and to celebrate the beautiful artwor
 # Contact
 Please feel free to [e-mail us](mailto:asso.actin@gmail.com) or follow us on our social media accounts if you have any questions or just want to say hi!
 
-*Facebook* https://www.facebook.com/Actine.SciArt/
-*Twitter*
+*Facebook* https://www.facebook.com/Actine.SciArt/  
+*Twitter*  
 *Instagram*
