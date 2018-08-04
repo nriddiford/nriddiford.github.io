@@ -26,6 +26,6 @@ To complement the books we are publishing, and to celebrate the beautiful artwor
 # Contact
 Please feel free to [e-mail us](mailto:asso.actin@gmail.com) or follow us on our social media accounts if you have any questions or just want to say hi!
 
-*Facebook* https://www.facebook.com/Actine.SciArt/  
+*[Facebook](https://www.facebook.com/Actine.SciArt/)*  
 *Twitter*  
 *Instagram*
