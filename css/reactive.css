@@ -94,7 +94,6 @@ dt {
     display: -moz-inline-box;
     *display: inline-block;
     /* For IE7 */
-    zoom: 1;
     /* Trigger hasLayout */
     margin-left: 1.5%;
     margin-right: 1.5%;
