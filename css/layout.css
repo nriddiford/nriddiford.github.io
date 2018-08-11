@@ -147,7 +147,7 @@ body.landing #header nav a {
 /* Banner */
 
 #banner {
-    background-image: url(../images/dark_tint.png), url(../images/DNA_s.jpg);
+    background-image: url(../images/dark_tint.png), url(../images/DNA.jpg);
     background-position: center center;
     opacity: 0.9;
     background-size: cover;
