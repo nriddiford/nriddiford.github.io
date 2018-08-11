@@ -19,16 +19,15 @@
     padding: 30px;
 /*
     border: 12px solid #B22222;
-border-radius: 10px;
-    
+    border-radius: 10px;
 */
+    
     align-items: flex-start;
     flex-basis: auto; /* default value */
     max-width: 1800px;
     /* width: (containers) */
 /*    width: 1600px;*/
 }
-
 
 .contact {
     text-align: center;
