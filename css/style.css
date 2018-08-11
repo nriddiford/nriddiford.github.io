@@ -252,43 +252,31 @@ dl p {
 
 /* Style all font awesome icons */
 
-.fa {
-    padding: 20px;
-    width: 40px;
+.fab {
+    padding: 5px;
+    width: flex;
     text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
+    margin: 5px 5px;
+    transform: scale(1.5);
 }
 
 /* Add a hover effect if you want */
 
-.fa:hover {
-    opacity: 0.6;
+.fab:hover {
+    color: dodgerblue;
+    opacity: 0.5;
+    text-decoration: none;
+
 }
 
 /* Set a specific color for each brand */
 
 /* Facebook */
 
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
 
-/* Twitter */
-
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-}
-
-.fa-instagram {
-    background: #125688;
-    color: white;
-}
 
 ul.icons {
-    cursor: default;
+    cursor: pointer;
     list-style: none;
     padding-left: 0;
 }
@@ -303,5 +291,5 @@ ul.icons li:last-child {
 }
 
 ul.icons li .icon:before {
-    font-size: 2em;
+    font-size: em;
 }
