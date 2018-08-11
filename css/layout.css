@@ -1,4 +1,5 @@
 /*body {background-color: #eae9e3;}*/
+
 /* flag logo */
 
 .flag-img {
@@ -18,10 +19,11 @@
     margin-top: 10px;
     padding: 30px;
     align-items: flex-start;
-    flex-basis: auto; /* default value */
+    flex-basis: auto;
+    /* default value */
     max-width: 1600px;
     /* width: (containers) */
-/*    width: 1600px;*/
+    /*    width: 1600px;*/
 }
 
 
@@ -32,6 +34,7 @@
 }
 
 }
+
 .special {
     text-align: center;
 }
@@ -135,10 +138,10 @@ body.landing #header nav a {
 }
 
 .button.special {
-			background-color: #383b43;
-			color: #ffffff !important;
-        cursor: pointer;
-		}
+    background-color: #383b43;
+    color: #ffffff !important;
+    cursor: pointer;
+}
 
 /* Banner */
 
