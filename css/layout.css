@@ -22,6 +22,8 @@
     flex-basis: auto;
     /* default value */
     max-width: 1600px;
+    min-width: 600px;
+
     /* width: (containers) */
     /*    width: 1600px;*/
 }
@@ -56,6 +58,8 @@ body.landing #header {
 body.landing #header nav a {
     color: rgba(255, 255, 255, 0.5);
 }
+
+
 
 /* Header */
 
