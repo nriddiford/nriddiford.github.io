@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html, h1, h2, h3, h4, h5, h6, p, a {
+    font-family: "Raleway", serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.t-lg {
+    font-size: 150%;
+    line-height: 2vw;
+}
+
+/* Nav bar */
+.navbar {
+    background-color: rgba(26, 62, 85, 0.82);
+}
+
+.nav-link, .navbar-brand {
+    color: rgba(141, 162, 180, 0.9);
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #4bb2f9 !important;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* header style */
+.header {
+    background-image: url(../images/Book_example_cad_.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.47);
+}
+
+.description {
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
+
+.description h1 {
+    color: rgba(11, 29, 43, 0.87);
+    font-size: 6em;
+}
+
+.description p {
+    color: rgba(73, 73, 73, 0.88);
+    font-size: 1.5em;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.description button {
+    border: 1px solid #35adf9;
+    background: #35adf9;
+    color: #fff;
+}
+
+/* Profile cards */
+.card-body {
+    text-align: center;
+}
+
+.card {
+    background: rgba(82, 112, 122, 0.09);
+}
+
+.card:hover {
+    box-shadow: 0 12px 24px 0 rgba(76, 183, 255, 0.53);
+    -webkit-filter: opacity(100%);
+    background: rgba(47, 127, 201, 0.12);
+    /* Safari 6.0 - 9.0 */
+    filter: opacity(100%);
+}
+
+/* Google map */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* Footer */
+.footer {
+    background: #061D25;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+
+.footer a:first-child {
+    border-left: 1px solid #70726F;
+}
+
+.footer a:hover {
+    color: #4bb2f9;
+}
+
+/* Custom media queries for font size/line height */
+/*
+Extra small devices (portrait phones, less than 544px)
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+p {
+    font-size: 1rem;
+}
+
+/*Bootstrap 4 breakpoints*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+    p {
+        font-size: .1rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    p {
+        font-size: 1.2rem;
+        line-height: 1.75;
+    }
+}
