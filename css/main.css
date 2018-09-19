@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 html, h1, h2, h3, h4, h5, h6, p, a {
     font-family: "Raleway", serif;
@@ -8,10 +8,6 @@ html, body {
     height: 100%;
 }
 
-.t-lg {
-    font-size: 150%;
-    line-height: 2vw;
-}
 
 /* Nav bar */
 .navbar {
@@ -116,6 +112,7 @@ html, body {
     padding: 10px 0;
 }
 
+
 .footer a {
     color: #70726F;
     font-size: 20px;
@@ -139,14 +136,14 @@ Extra small devices (portrait phones, less than 544px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
 p {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 /*Bootstrap 4 breakpoints*/
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
     p {
-        font-size: .1rem;
+        font-size: 1rem;
     }
 }
 
