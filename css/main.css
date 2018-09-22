@@ -40,7 +40,7 @@ html {
 }
 /* header style */
 .header {
-  background-image: url(../images/Book_example_cad_s2.jpg);
+  background-image: url(../images/Book_example_cad_s.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -133,12 +133,15 @@ p {
 }
 
 
-@media (max-width: 544px) {
- header {
-     background-image: url(../images/Book_example_cad_xs.jpg)!important;
+@media (max-width: 542px) {
+ .header {
+     background-image: url(../images/Book_example_cad_xs.jpg);
      background-size: cover;
-     height: 100%;
-    overflow: hidden;
+     height: auto;
+    overflow: inherit;
+    }
+    .description{
+        top: 15%;
     }
     
 }
