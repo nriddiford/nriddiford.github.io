@@ -39,12 +39,13 @@ html {
   justify-content: flex-end;
 }
 /* header style */
-.header {
+header {
   background-image: url(../images/Book_example_cad_s.jpg);
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
+
 .overlay {
   position: absolute;
   min-height: 100%;
@@ -134,11 +135,8 @@ p {
 
 
 @media (max-width: 542px) {
- .header {
+ header {
      background-image: url(../images/Book_example_cad_xs.jpg);
-     background-size: cover;
-     height: auto;
-    overflow: inherit;
     }
     .description{
         top: 15%;
