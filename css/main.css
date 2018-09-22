@@ -133,7 +133,7 @@ p {
 }
 
 
-@media (min-width: 10px) {
+@media (max-width: 544px) {
  header {
      background-image: url(../images/Book_example_cad_xs.jpg)!important;
      background-size: cover;
