@@ -15,10 +15,11 @@ p,
 a {
   font-family: "Raleway", serif;
 }
-html,
-body {
-  height: 100%;
+
+html {
+  height: 100%!important;
 }
+
 /* Nav bar */
 .navbar {
   background-color: rgba(26, 62, 85, 0.88);
@@ -54,9 +55,9 @@ body {
 }
 .description {
   position: absolute;
-  top: 30%;
+  top: 40%;
   margin: auto;
-  padding: 2em;
+  padding: 1em;
 }
 .description h1 {
   color: rgba(11, 29, 43, 0.87);
@@ -79,6 +80,7 @@ body {
 }
 .card {
   background: rgba(82, 112, 122, 0.09);
+/*  min-width: 10%;*/
 }
 .card:hover {
   box-shadow: 0 12px 24px 0 rgba(76, 183, 255, 0.53);
@@ -127,7 +129,7 @@ Extra small devices (portrait phones, less than 544px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 /*Bootstrap 4 breakpoints*/
 /* Small devices (landscape phones, 544px and up) */
@@ -135,12 +137,18 @@ p {
   p {
     font-size: 1rem;
   }
+    body{
+        background-color: azure;
+    }
 }
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   p {
     font-size: 1.1rem;
   }
+    body{
+        background-color: antiquewhite;
+    }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -148,13 +156,19 @@ p {
     font-size: 1.1rem;
     line-height: 1.5;
   }
+    body{
+        background-color: darkseagreen;
+    }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   p {
     font-size: 1.2rem;
-    line-height: 1.75;
+    line-height: 1.6;
   }
+    body{
+        background-color: yellow;
+    }
 }
 /*# sourceMappingURL=main.css.map */
 
