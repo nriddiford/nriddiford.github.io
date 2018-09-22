@@ -12,7 +12,7 @@ $(document).ready(function () {
 // Scroll to id
 $(".navbar a").click(function () {
     $("body,html").animate({
-        scrollTop: $("#" + $(this).data('value')).offset().top - $('.navbar').height()
+        scrollTop: $("#" + $(this).data('value')).offset().top - $('.navbar').height() - 10
     }, 1000)
 
 });
@@ -20,7 +20,7 @@ $(".navbar a").click(function () {
 // Header button -> scroll down
 $(".header button").click(function () {
     $("body,html").animate({
-        scrollTop: $("#" + $(this).data('value')).offset().top - $('.navbar').height()
+        scrollTop: $("#" + $(this).data('value')).offset().top - $('.navbar').height() - 10
     }, 1000)
 
 });
