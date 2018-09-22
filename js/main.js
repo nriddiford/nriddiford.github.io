@@ -20,7 +20,7 @@ $(".navbar a").click(function () {
 // Header button -> scroll down
 $(".header button").click(function () {
     $("body,html").animate({
-        scrollTop: $("#" + $(this).data('value')).offset().top
+        scrollTop: $("#" + $(this).data('value')).offset().top - $('.navbar').height()
     }, 1000)
 
 });
