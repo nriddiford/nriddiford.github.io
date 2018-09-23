@@ -20,6 +20,7 @@ html {
   height: 100%!important;
 }
 
+
 /* Nav bar */
 .navbar {
   background-color: rgba(26, 62, 85, 0.88);
@@ -90,20 +91,31 @@ header {
   /* Safari 6.0 - 9.0 */
   filter: opacity(100%);
 }
-/* Google map */
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 50%;
-  position: relative;
-  height: 0;
-}
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
+/* Contact form map */
+
+/* Style inputs */
+input[type=text], select, textarea {
   width: 100%;
-  position: absolute;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
 /* Footer */
 .footer {
   background: #061D25;
