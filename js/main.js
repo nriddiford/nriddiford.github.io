@@ -3,13 +3,7 @@ $(document).ready(function () {
     $('.header').height($(window).height());
 });
 
-// // Get height of screen for container sizing
-// $(document).ready(function(){
-//     $('.container').height($(window).height());
-// });
-
-
-// Scroll to id
+// Scroll to id from nav items
 $(".navbar a").click(function () {
     $("body,html").animate({
         scrollTop: $("#" + $(this).data('value')).offset().top - $('.navbar').height() - 10
@@ -25,29 +19,6 @@ $(".header button").click(function () {
 
 });
 
-
-
-
-// GENERAL SETTING
-
-
-// // Custom Settings
-// sr.reveal('.foo-1', { duration: 200 });
-//
-// sr.reveal('.foo-2', {
-//     origin: 'right',
-//     duration: 2000
-// });
-//
-// sr.reveal('.foo-3', {
-//     rotate: { x: 100, y: 100, z: 0 },
-//     duration: 1000
-// });
-//
-// sr.reveal('.foo-4', {
-//     viewFactor: 0.5
-// });
-//
-// sr.reveal('.foo-5', {
-//     duration: 200
-// });
+// Reveal text on scroll through
+window.sr = ScrollReveal({ reset: true });
+sr.reveal('.reveal', { opacity: 0.1, duration:600 });
