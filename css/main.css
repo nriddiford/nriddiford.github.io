@@ -20,6 +20,11 @@ html {
   height: 100%!important;
 }
 
+.flex-container {
+  padding-left: .8em!important;
+  padding-right: .8em!important;
+
+}
 
 /* Nav bar */
 .navbar {
@@ -145,7 +150,7 @@ p {
   font-size: 1rem;
 }
 
-
+/* xs screen */
 @media (max-width: 542px) {
  header {
      background-image: url(../images/Book_example_cad_xs.jpg);
@@ -153,6 +158,11 @@ p {
     .description{
         top: 15%;
     }
+  .card-deck {
+    padding-left: 2.5em!important;
+    padding-right: 2.5em!important;
+
+  }
     
 }
 
