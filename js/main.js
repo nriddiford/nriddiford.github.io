@@ -20,5 +20,8 @@ $(".header button").click(function () {
 });
 
 // Reveal text on scroll through
-window.sr = ScrollReveal({ reset: true });
+window.sr = ScrollReveal({
+    reset: true,
+    easing: 'ease-in'
+});
 sr.reveal('.reveal', { opacity: 0.1, duration:600 });
