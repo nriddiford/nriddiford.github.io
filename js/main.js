@@ -19,9 +19,10 @@ $(".header button").click(function () {
 
 });
 
-// Reveal text on scroll through
-window.sr = ScrollReveal({
-    reset: true,
-    easing: 'ease-in'
-});
-sr.reveal('.reveal', { opacity: 0.1, duration:600 });
+// // Reveal text on scroll through
+// window.sr = ScrollReveal({
+//     reset: true,
+//     easing: 'ease-in'
+// });
+// sr.reveal('.reveal', { opacity: 0.1, duration:600 });
+ScrollReveal().reveal('.reveal', { reset: true, easing: 'ease-in', opacity: 0.1, duration:600 });
