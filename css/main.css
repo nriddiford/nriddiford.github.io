@@ -115,7 +115,7 @@ header {
 }
 
 .zoom {
-    transition: transform .5s; /* Animation */
+    transition: transform .2s; /* Animation */
     margin: 0 auto;
 }
 
