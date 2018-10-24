@@ -17,6 +17,10 @@ a {
     font-family: "Raleway", serif;
 }
 
+p {
+    font-size: 1rem;
+}
+
 html {
     height: 100% !important;
 }
@@ -24,7 +28,6 @@ html {
 .flex-container {
     padding-left: .8em !important;
     padding-right: .8em !important;
-
 }
 
 /* Nav bar */
@@ -92,6 +95,7 @@ header {
     color: #fff;
 }
 
+
 /* Profile cards */
 .card-body {
     text-align: center;
@@ -110,29 +114,15 @@ header {
     filter: opacity(100%);
 }
 
-/* Contact form map */
-
-/* Style inputs */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+.zoom {
+    transition: transform .5s; /* Animation */
+    margin: 0 auto;
 }
 
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
+.zoom:hover {
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
 
 /* Footer */
 .footer {
@@ -157,10 +147,6 @@ input[type=submit]:hover {
     color: #4bb2f9;
 }
 
-p {
-    font-size: 1rem;
-}
-
 /*Bootstrap 4 breakpoints*/
 /* xs screen */
 @media (max-width: 542px) {
@@ -173,8 +159,8 @@ p {
     }
 
     .card-deck {
-        padding-left: 2.5em !important;
-        padding-right: 2.5em !important;
+        padding-left: 1.5em !important;
+        padding-right: 1.5em !important;
     }
 }
 
