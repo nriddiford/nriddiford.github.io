@@ -25,4 +25,5 @@ $(".header button").click(function () {
 //     easing: 'ease-in'
 // });
 // sr.reveal('.reveal', { opacity: 0.1, duration:600 });
-ScrollReveal().reveal('.reveal', { reset: true, easing: 'ease-in', opacity: 0.1, duration:600 });
+ScrollReveal().reveal('.reveal', {reset: true})
+// ScrollReveal().reveal('.reveal', { reset: true, easing: 'ease-in', opacity: 0.1, duration:600 });
