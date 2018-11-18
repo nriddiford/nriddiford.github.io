@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <!--Scroll spy-->
-<body data-spy="scroll" data-target=".navbar" data-offset="50" class="post">
+<body data-spy="scroll" data-target=".navbar" data-offset="65" class="post">
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <!-- Brand -->
@@ -45,7 +45,6 @@
     <a class="navbar-brand navbar-left" href="index_fr.html">
         <img src="images/FR_flag.jpg" width="50" height="30" alt="">
     </a>
-
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -80,27 +79,24 @@
 </nav>
 
 
-<header class="header">
+<header id="header" class="header">
     <div class="overlay"></div>
     <div class="container">
         <div class="description ml-3">
             <h1>Actin Art</h1>
             <p>Beautiful science stories for curious children</p>
-            <button type="button" class="btn btn-outline-secondary btn-lg" data-value="about">See
-                more
-            </button>
         </div>
+        <a data-scroll href="#about">
+            <div class="arrow"></div>
+        </a>
     </div>
 </header>
 
-<!--TODO: Add actin art logo about about text-->
-
-<div class="flex-container mt-5 reveal" id="about">
-    <h1 class="text-center display-3 mb-3">About</h1>
+<div id="about" class="flex-container reveal">
+    <h1 class="text-center display-3 mb-4">About</h1>
     <div class="row justify-content-center">
 
-        <div class="col-xs-12 col-md-6 col-lg-4 reveal">
-            <!--<img src="images/LOGO_greenBlue.png" class="img-fluid mb-5 mx-auto d-block" alt="Logo">-->
+        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
             <a href="test_shop.html">
                 <img src="images/LOGO_greenBlue.png" class="img-fluid mb-5 mx-auto d-block" alt="Logo">
             </a>
@@ -116,17 +112,17 @@
                 children and adults to become as excited as we are by cells, molecules and biology in general!</p>
         </div>
 
-        <div class="col-xs-12 col-md-6 col-lg-4 reveal">
+        <div class="col-xs-12 col-md-5 col-xl-4 align-items-center reveal">
             <img src="images/ActinArt_s2.jpg" alt="Actin Art" class="img-fluid">
         </div>
     </div>
 </div>
 
-<!--TODO: These cards are still not particularly reactive-->
+<div id="people" class="parallax sep-1 mt-5 mb-4 reveal"></div>
 
-<div class="flex-container mt-5 reveal" id="people">
-    <h1 class="text-center mb-3 display-3">People</h1>
-    <div class="row justify-content-center ">
+<div class="flex-container reveal">
+    <h1 class="text-center mb-4 display-3">People</h1>
+    <div class="row justify-content-center">
         <div class="col-xs-8 col-md-10 col-xl-12">
             <div class="card-deck mt-2">
                 <!-- Olga -->
@@ -198,16 +194,18 @@
 
 </div>
 
-<div class="flex-container mt-5 reveal" id="school-workshops">
-    <h1 class="text-center display-3 mb-3">School workshops</h1>
+<div id="school-workshops" class="parallax sep-2 mt-5 mb-4 reveal"></div>
+
+<div class="flex-container reveal">
+    <h1 class="text-center display-3 mb-4">School workshops</h1>
     <div class="row justify-content-center">
-        <div class="col-xs-12 col-md-6 col-lg-4 reveal">
+        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
             <img src="images/cadherine-Joann.jpg" alt="Workshop" class="img-fluid">
             <p>
             </p>
         </div>
 
-        <div class="col-xs-12 col-md-6 col-lg-4 reveal">
+        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
             <p>We recently held a workshop at the Lyonnais nursery located in the 5th arrondissement in Paris. After
                 around 15 minutes of storytelling with our artwork, we held activities that related to some of our
                 stories. This was a huge success, and the children were really engaged with our stories. After
@@ -225,8 +223,10 @@
     </div>
 </div>
 
-<div class="flex-container mt-5 reveal" id="books">
-    <h1 class="text-center mb-3 display-3">Books</h1>
+<div id="books" class="parallax sep-3 mt-5 mb-4 reveal"></div>
+
+<div class="flex-container reveal">
+    <h1 class="text-center mb-4 display-3">Books</h1>
     <div class="row justify-content-center">
         <div class="col-xs-12 col-md-10 col-xl-8 reveal">
             <p>We have been working very hard on publishing some of our stories, and are delighted to announce that the
@@ -236,75 +236,68 @@
                 about science. For each book, the author and illustrator have worked hard to make the story both
                 scientifically accurate, as well as exciting and beautiful.
             </p>
-
             <p class="reveal"><strong>The first three albums will be available to buy from November 22nd!</strong></p>
-
         </div>
-
-        <!--<div class="col-xs-12 col-md-6 col-lg-4 reveal">-->
-        <!--<p>-->
-        <!--</p>-->
-        <!--<img src="images/Book_example_paint_s.jpg" alt="Kitten painters" class="img-fluid">-->
-        <!--</div>-->
-
     </div>
-
 </div>
+
 
 <div class="flex-container mt-5 reveal">
     <div class="row">
         <div class="col-md-4 mb-3 reveal">
             <img src="images/scaled/markova.jpg" alt="Markova" class="img-fluid mx-auto d-block zoom" width="350"
                  height="350">
-            <!--<form class="form-inline justify-content-center mt-5 mb-3" action="https://www.paypal.com/cgi-bin/webscr"-->
-            <!--method="post" target="_top">-->
-            <!--<input type="hidden" name="cmd" value="_s-xclick">-->
-            <!--<input type="hidden" name="hosted_button_id" value="AMK6595M6975S">-->
-            <!--<input type="image" src="https://www.paypalobjects.com/en_US/FR/i/btn/btn_buynowCC_LG.gif" border="0"-->
-            <!--name="submit" alt="PayPal - The safer, easier way to pay online!">-->
-            <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
-            <!--</form>-->
+            <form class="form-inline justify-content-center mt-5 mb-3" target="paypal"
+                  action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="FT67N5CAB8MLN">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0"
+                       name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
         </div>
         <div class="col-md-4 mb-3 reveal">
             <img src="images/scaled/stefanutti.jpg" alt="Stefanutti" class="img-fluid mx-auto d-block zoom" width="350"
                  height="350">
-            <!--<form class="form-inline justify-content-center mt-5 mb-3" action="https://www.paypal.com/cgi-bin/webscr"-->
-            <!--method="post" target="_top">-->
-            <!--<input type="hidden" name="cmd" value="_s-xclick">-->
-            <!--<input type="hidden" name="hosted_button_id" value="AMK6595M6975S">-->
-            <!--<input type="image" src="https://www.paypalobjects.com/en_US/FR/i/btn/btn_buynowCC_LG.gif" border="0"-->
-            <!--name="submit" alt="PayPal - The safer, easier way to pay online!">-->
-            <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
-            <!--</form>-->
+            <form class="form-inline justify-content-center mt-5 mb-3" target="paypal"
+                  action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="T6ANJCNUYGQPJ">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0"
+                       name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
         </div>
         <div class="col-md-4 mb-3 reveal">
             <img src="images/scaled/kuperstein.jpg" alt="Kuperstein" class="img-fluid mx-auto d-block zoom" width="350"
                  height="350">
-            <!--<form class="form-inline justify-content-center mt-5 mb-3" action="https://www.paypal.com/cgi-bin/webscr"-->
-            <!--method="post" target="_top">-->
-            <!--<input type="hidden" name="cmd" value="_s-xclick">-->
-            <!--<input type="hidden" name="hosted_button_id" value="AMK6595M6975S">-->
-            <!--<input type="image" src="https://www.paypalobjects.com/en_US/FR/i/btn/btn_buynowCC_LG.gif" border="0"-->
-            <!--name="submit" alt="PayPal - The safer, easier way to pay online!">-->
-            <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
-            <!--</form>-->
+            <form class="form-inline justify-content-center mt-5 mb-3" target="paypal"
+                  action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="E2UGRG4F94BHC">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0"
+                       name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
-
     </div>
 </div>
 
+<div id="exhibitions" class="parallax sep-4 mt-5 mb-4 reveal"></div>
 
-<div class="flex-container mt-5 reveal" id="exhibitions">
-    <h1 class="text-center mb-3 display-3">Exhibitions</h1>
+<div class="flex-container reveal">
+    <h1 class="text-center display-3 mb-4">Exhibitions</h1>
     <div class="row justify-content-center">
 
-        <div class="col-xs-12 col-md-6 col-lg-4 reveal">
+        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
             <img src="images/Exhibition_s.jpg" alt="Poster" class="img-fluid" width="500">
             <p>
             </p>
         </div>
 
-        <div class="col-xs-12 col-md-6 col-lg-4 reveal">
+        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
             <p>To complement the books we are publishing, and to celebrate the beautiful artwork each book contains, we
                 are planning an exhibition ‘Le Jardin de Curiosites’. This will take place over the summer of 2019
                 in the Jardin Curie at the Institut Curie. Please <a href="mailto:asso.actine@gmail.com">e-mail us</a>
@@ -314,18 +307,19 @@
     </div>
 </div>
 
+<div class="parallax sep-5 mt-5 mb-4 reveal"></div>
 
-<div class="flex-container mt-5 text-center reveal">
-    <h1 class="mb-3 display-3">Contact</h1>
+
+<div class="flex-container text-center reveal">
+    <h1 class="display-3 mb-4">Contact</h1>
+
     <div class="row justify-content-center">
+    <p>Please feel free to <a href="mailto:asso.actine@gmail.com">e-mail us</a> or follow us on our social media
+    accounts if you have any questions or just want to say hi!</p>
 
-        <p>Please feel free to <a href="mailto:asso.actine@gmail.com">e-mail us</a> or follow us on our social media
-            accounts if you have any questions or just want to say hi!</p>
-
-        <div class="col-md-12">
-            <iframe src="https://maps.google.com/maps?q=11%20Rue%20Pierre%20et%20Marie%20Curie%2C%2075005%20Paris&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="100%" height="450" frameborder="0" style="border:0"></iframe>
-        </div>
+    <div class="col-md-12">
+        <iframe src="https://maps.google.com/maps?q=11%20Rue%20Pierre%20et%20Marie%20Curie%2C%2075005%20Paris&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="450" frameborder="0" style="border:0"></iframe>
     </div>
 
 </div>
@@ -337,9 +331,7 @@
         <a href="//www.instagram.com/actine.sciart/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
     </div>
 </footer>
-
-<!--TODO: Olga -> On Olga's Firefox, the scrolreveal is not horizontally cetered, making some sections invisible-->
-
+    
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -352,6 +344,5 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script type="text/javascript" src='js/main.js'></script>
-
 </body>
 </html>
