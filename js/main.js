@@ -23,4 +23,4 @@ $(document).ready(function(){
     });
 });
 
-ScrollReveal().reveal('.reveal', {reset: true})
+// ScrollReveal().reveal('.reveal', {reset: true})
