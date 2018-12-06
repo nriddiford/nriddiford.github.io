@@ -24,3 +24,14 @@ $(document).ready(function(){
 });
 
 // ScrollReveal().reveal('.reveal', {reset: true})
+
+// // Mousover animation for books
+// $('.bookhover').mouseover(function() {
+//     $('.hovertext').css("visibility","visible");
+// });
+//
+// $('.bookhover').mouseout(function() {
+//     $('.hovertext').css("visibility","hidden");
+// });
+//
+//
