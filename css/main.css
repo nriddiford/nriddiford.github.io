@@ -65,7 +65,7 @@ header {
     padding: env(safe-area-inset) !important;
 }
 
-.overlay_h {
+.overlay_header {
     position: absolute;
     min-height: 100%;
     min-width: 100%;
