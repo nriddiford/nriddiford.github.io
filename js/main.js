@@ -52,6 +52,7 @@ var x = window.matchMedia("(max-width: 992px)")
 moveCol(x) // Call listener function at run time
 x.addListener(moveCol) // Attach listener function on state changes
 
+
 var mobileHover = function () {
     $('*').on('touchstart', function () {
         $(this).trigger('hover');
