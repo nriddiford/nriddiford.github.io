@@ -17,18 +17,15 @@ a {
     font-family: "Raleway", serif;
 }
 
-p {
-    font-size: 1rem;
+body {
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.5em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 }
 
 html {
     height: 100% !important;
 }
 
-.flex-container {
-    padding-left: .8em !important;
-    padding-right: .8em !important;
-}
 
 /* Nav bar */
 .navbar {
@@ -53,6 +50,16 @@ html {
     justify-content: flex-end;
 }
 
+
+.flex-container {
+    width: 100%;
+    padding-left: .8em !important;
+    padding-right: .8em !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 /* header style */
 header {
     background-image: url(../images/Book_example_cad_s.jpg);
@@ -65,7 +72,7 @@ header {
     padding: env(safe-area-inset) !important;
 }
 
-.overlay {
+.header .overlay {
     position: absolute;
     min-height: 100%;
     min-width: 100%;
@@ -92,6 +99,17 @@ header {
     width: 100%;
     line-height: 1.5;
 }
+
+/*.description button {*/
+    /*border: 1px solid #35adf9;*/
+    /*background: #35adf9;*/
+    /*color: #071b43;*/
+/*}*/
+/*.description i {*/
+    /*color: #071b43;*/
+    /*width: 90px;*/
+    /*height: 90px;*/
+/*}*/
 
 .arrow {
     box-sizing: border-box;
@@ -123,7 +141,7 @@ header {
 }
 
 .card:hover {
-    box-shadow: 0 12px 24px 0 rgba(76, 183, 255, 0.53);
+    box-shadow: 0 12px 24px 0 rgba(35, 144, 255, 0.53);
     -webkit-filter: opacity(100%);
     background: rgba(47, 127, 201, 0.12);
     /* Safari 6.0 - 9.0 */
@@ -131,7 +149,7 @@ header {
 }
 
 .zoom {
-    transition: transform .05s; /* Animation */
+    transition: transform .025s; /* Animation */
     margin: 0 auto;
 }
 
@@ -159,25 +177,29 @@ header {
 }
 
 .parallax.sep-2 {
-    background: linear-gradient(rgba(144, 123, 218, 0.86), rgb(71, 13, 172));
+    background: linear-gradient(rgba(152, 131, 246, 0.96), rgba(97, 166, 246, 0.96));
     background-attachment: fixed;
 }
 
 .parallax.sep-3 {
-    background: linear-gradient(rgba(24, 240, 12, 0.6), rgba(13, 153, 57, 0.82));
+    background: linear-gradient(rgba(246, 143, 245, 0.96), rgba(152, 131, 246, 0.96));
     background-attachment: fixed;
 }
 
 .parallax.sep-4 {
-    background: linear-gradient(rgba(239, 37, 68, 0.62), rgba(198, 29, 56, 0.88));
+    background: linear-gradient(rgba(246, 77, 95, 0.96), rgba(246, 143, 245, 0.96));
     background-attachment: fixed;
 }
 
 .parallax.sep-5 {
-    background: linear-gradient(rgba(235, 98, 191, 0.73), rgba(157, 16, 79, 0.93));
+    background: linear-gradient(rgba(246, 162, 69, 0.96), rgba(246, 77, 95, 0.96));
     background-attachment: fixed;
 }
 
+.parallax.sep-6 {
+    background: linear-gradient(rgba(62, 212, 65, 0.96), rgba(246, 162, 69, 0.96));
+    background-attachment: fixed;
+}
 /* Footer */
 .footer {
     background: #061D25;
@@ -201,60 +223,67 @@ header {
     color: #4bb2f9;
 }
 
-/*Bootstrap 4 breakpoints*/
-/* xs screen */
-@media (max-width: 542px) {
-    header {
-        background-image: url(../images/Book_example_cad_xs.jpg);
-    }
 
-    .description {
-        top: 15%;
-    }
-
-    .card-deck {
-        padding-left: 1.5em !important;
-        padding-right: 1.5em !important;
-    }
-}
-
-/* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {
-    p {
-        font-size: 1rem;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {
-    p {
-        font-size: 1.1rem;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    p {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }
-
+.fit {
+    font-size: 16.5px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    line-height: 1.4em;
+    color: #d9e0e6;
 }
 
 
-/* Protect iPhone safe areas */
-@supports (padding: max(0px)) {
-    .body {
-        padding-left: max(12px, env(safe-area-inset-left));
-        padding-right: max(12px, env(safe-area-inset-right));
-    }
+.hvrbox {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.hvrbox .hvrbox-layer_top {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    height: 350px;
+    background: rgba(11, 11, 28, 0.8);
+    color: #fff;
+
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+    opacity: 1;
+}
+
+.hvrbox .hvrbox-text {
+    position: absolute;
+    padding: 2%;
+    width: 100%;
+}
+
+
+.hvrbox .hvrbox-text_mobile {
+    font-size: 15px;
+    border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+    border-top: 1px solid rgba(179, 179, 179, 0.7);
+    margin-top: 5px;
+    padding-top: 2px;
+    display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+    display: block;
+}
+
+
+a:hover {
+    text-decoration: none;
 }

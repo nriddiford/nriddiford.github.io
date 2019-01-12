@@ -33,6 +33,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
 </head>
 <!--Scroll spy-->
 <body data-spy="scroll" data-target=".navbar" data-offset="65" class="post">
@@ -68,6 +70,9 @@
             <li class="nav-item">
                 <a class="nav-link" data-value="exhibitions" href="#exhibitions">Exhibitions</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-value="join" href="#join">Join</a>
+            </li>
 
             <li class="nav-item">
                 <a class="btn" href="mailto:asso.actine@gmail.com">
@@ -84,135 +89,149 @@
     <div class="container">
         <div class="description ml-3">
             <h1>Actin Art</h1>
+            <h2 id="headtext"></h2>
+            <h2 id="headtext2"></h2>
             <p>Beautiful science stories for curious children</p>
+            <!--<button type="button" class="btn btn-outline-secondary btn-lg" data-value="about">See-->
+            <!--more-->
+            <!--</button>-->
         </div>
         <a data-scroll href="#about">
             <div class="arrow"></div>
         </a>
+        <!--<a class="ct-btn-scroll" href="#about"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>-->
     </div>
 </header>
 
-<div id="about" class="flex-container reveal">
+<!--TODO: Keep columns for small screens (i.e. ipad)-->
+
+<div id="about" class="container">
     <h1 class="text-center display-3 mb-4">About</h1>
     <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-6" id="current_col">
 
-        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
-            <!--<a href="test_shop.html">-->
-            <img src="images/LOGO_greenBlue.png" class="img-fluid mb-5 mx-auto d-block" alt="Logo">
-            <!--</a>-->
+            <img src="images/LOGO_greenBlue.png" class="img-fluid mb-5 mx-auto d-block" id="logo" alt="Logo">
+
             <p>Actin Art - <strong>L’association des Artistes et des Scientifiques Actine</strong> - is a science
                 communication project that combines science and art. It aims to raise general public interest in the
                 sciences and explain recent scientific discoveries. We are creating a series of short, illustrated,
                 science-based books that accurately relay science via fun, adventure stories for 3-5 year olds.</p>
 
-            <p class="reveal">As the science is accurate, the parents and teachers reading the stories to the children
+            <p>As the science is accurate, the parents and teachers reading the stories to the children
                 will learn too, and be better able to explain the science to the children. The characters in our stories
                 are based on the real molecules, proteins and cells that scientists study in the lab. Our aim is that
                 these books will inspire
                 children and adults to become as excited as we are by cells, molecules and biology in general!</p>
         </div>
 
-        <div class="col-xs-12 col-md-5 col-xl-4 align-items-center reveal">
-            <img src="images/ActinArt_s2.jpg" alt="Actin Art" class="img-fluid">
+        <div class="col-xs-12 col-md-6" id="next_col">
+            <img src="images/ActinArt_s2.jpg" alt="Actin Art" class="mx-auto d-block img-fluid">
         </div>
     </div>
 </div>
 
-<div id="people" class="parallax sep-1 mt-5 mb-4 reveal"></div>
+<div id="people" class="parallax sep-1 mt-5 mb-4"></div>
 
-<div class="flex-container reveal">
+<div class="flex-container">
     <h1 class="text-center mb-4 display-3">People</h1>
     <div class="row justify-content-center">
-        <div class="col-xs-8 col-md-10 col-xl-12">
-            <div class="card-deck mt-2">
-                <!-- Olga -->
-                <div class="card p-3 mb-4 reveal">
-                    <img class="card-img-top" src="images/Olga_s.png" alt="Olga">
-                    <div class="card-body">
-                        <h5 class="card-title">Olga Markova</h5>
-                        <p class="card-text text-muted">President</p>
-                    </div>
+        <div class="col-xs-10 col-xl-12 card-deck">
+            <!--<div class="card-deck mt-2">-->
+            <!-- Olga -->
+            <div id="olga" class="card p-3 mb-4">
+                <img class="card-img-top" src="images/Olga_s.png" alt="Olga">
+                <div class="card-body">
+                    <h5 class="card-title">Olga Markova</h5>
+                    <p class="card-text text-muted">President</p>
                 </div>
-
-                <!-- Judith -->
-                <div class="card p-3 mb-4 reveal">
-                    <img class="card-img-top" src="images/Judith_Mine-Hattab.png" alt="Judith">
-                    <div class="card-body">
-                        <h5 class="card-title">Judith Mine-Hattab</h5>
-                        <p class="card-text text-muted">Treasurer</p>
-                    </div>
-                </div>
-
-                <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
-
-                <!-- Marine -->
-                <div class="card p-3 mb-4 reveal">
-                    <img class="card-img-top" src="images/Marine_s.png" alt="Marine">
-                    <div class="card-body">
-                        <h5 class="card-title">Marine Stefanutti</h5>
-                        <p class="card-text text-muted">Secretary</p>
-                    </div>
-                </div>
-
-                <div class="w-100 d-none d-md-block d-xl-none"><!-- wrap every 3 on xl--></div>
-
-                <!-- Angela -->
-                <div class="card p-3 mb-4 reveal">
-                    <img class="card-img-top" src="images/Angela.png" alt="Angela">
-                    <div class="card-body">
-                        <h5 class="card-title">Angela Bellini</h5>
-                        <p class="card-text text-muted">Vice-president</p>
-                    </div>
-                </div>
-
-                <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
-
-                <!-- Bertsy -->
-                <div class="card p-3 mb-4 reveal">
-                    <img class="card-img-top" src="images/Bertis_s.png" alt="Bertsy">
-                    <div class="card-body">
-                        <h5 class="card-title">Bertsy Goic</h5>
-                        <p class="card-text text-muted">Social media</p>
-                    </div>
-                </div>
-
-                <!-- Nick -->
-                <div class="card p-3 mb-4 reveal">
-                    <img class="card-img-top reveal" src="images/nick.png" alt="Nick">
-                    <div class="card-body">
-                        <h5 class="card-title">Nick Riddiford</h5>
-                        <p class="card-text text-muted">Web developer</p>
-                    </div>
-                </div>
-
-                <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
-                <div class="w-100 d-none d-md-block d-xl-none"><!-- wrap every 3 on md--></div>
-
             </div>
+
+            <!-- Judith -->
+            <div class="card p-3 mb-4">
+                <img class="card-img-top" src="images/Judith_Mine-Hattab_400.png" alt="Judith">
+                <div class="card-body">
+                    <h5 class="card-title">Judith Mine-Hattab</h5>
+                    <p class="card-text text-muted">Treasurer</p>
+                </div>
+            </div>
+
+            <div class="w-100 d-none d-sm-block d-md-none"></div> <!-- wrap every 2 on screens <= sm-->
+
+            <!--<div class="w-100 d-none d-xs-block d-sm-block d-md-none d-lg-none"></div>&lt;!&ndash; wrap every 2 on sm&ndash;&gt;-->
+
+            <!-- Marine -->
+            <div class="card p-3 mb-4">
+                <img class="card-img-top" src="images/Marine_s.png" alt="Marine">
+                <div class="card-body">
+                    <h5 class="card-title">Marine Stefanutti</h5>
+                    <p class="card-text text-muted">Secretary</p>
+                </div>
+            </div>
+
+            <div class="w-100 d-none d-md-block d-xl-none"></div> <!-- wrap every 3 on screen > sm <= md-->
+
+            <!--<div class="w-100 d-none d-md-block d-xl-none"></div>&lt;!&ndash; wrap every 3 on md&ndash;&gt;-->
+
+            <!-- Angela -->
+            <div class="card p-3 mb-4">
+                <img class="card-img-top" src="images/Angela_400.png" alt="Angela">
+                <div class="card-body">
+                    <h5 class="card-title">Angela Bellini</h5>
+                    <p class="card-text text-muted">Vice-president</p>
+                </div>
+            </div>
+
+            <div class="w-100 d-none d-sm-block d-md-none"></div> <!-- wrap every 2 on screens <= sm-->
+
+            <!--<div class="w-100 d-none d-xs-block d-sm-block d-md-none d-lg-none"></div>&lt;!&ndash; wrap every 2 on sm&ndash;&gt;-->
+
+            <!-- Bertsy -->
+            <div class="card p-3 mb-4">
+                <img class="card-img-top" src="images/Bertis_400.png" alt="Bertsy">
+                <div class="card-body">
+                    <h5 class="card-title">Bertsy Goic</h5>
+                    <p class="card-text text-muted">Social media</p>
+                </div>
+            </div>
+
+            <!-- Nick -->
+            <div class="card p-3 mb-4">
+                <img class="card-img-top" src="images/nick_400.png" alt="Nick">
+                <div class="card-body">
+                    <h5 class="card-title">Nick Riddiford</h5>
+                    <p class="card-text text-muted">Web developer</p>
+                </div>
+            </div>
+
+            <div class="w-100 d-none d-sm-block d-md-none"></div> <!-- wrap every 2 on screens <= sm-->
+            <div class="w-100 d-none d-md-block d-xl-none"></div> <!-- wrap every 3 on screen > sm <= md-->
+
+            <!--<div class="w-100 d-none d-xs-block d-sm-block d-md-none d-lg-none"></div>&lt;!&ndash; wrap every 2 on sm&ndash;&gt;-->
+            <!--<div class="w-100 d-none d-md-block d-xl-none"></div> &lt;!&ndash; wrap every 3 on md&ndash;&gt;-->
+
+            <!--</div>-->
         </div>
     </div>
 
 </div>
 
-<div id="school-workshops" class="parallax sep-2 mt-5 mb-4 reveal"></div>
+<div id="school-workshops" class="parallax sep-2 mt-5 mb-4"></div>
 
-<div class="flex-container reveal">
+<div class="container">
     <h1 class="text-center display-3 mb-4">School workshops</h1>
     <div class="row justify-content-center">
-        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
-            <img src="images/cadherine-Joann.jpg" alt="Workshop" class="img-fluid">
-            <p>
-            </p>
+        <div class="col-xs-12 col-md-6 mb-3">
+            <img src="images/scaled/cadherine-Joann.png" alt="Workshop" class="mx-auto d-block img-fluid">
         </div>
 
-        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
+        <div class="col-xs-12 col-lg-6">
             <p>We recently held a workshop at the Lyonnais nursery located in the 5th arrondissement in Paris. After
                 around 15 minutes of storytelling with our artwork, we held activities that related to some of our
                 stories. This was a huge success, and the children were really engaged with our stories. After
                 following-up with the school three months later we were delighted to discover that the children
                 remembered some of the key concepts from our stories!</p>
 
-            <p class="reveal">The school was very grateful for our involvement, and is looking forward to our next
+            <p>The school was very grateful for our involvement, and is looking forward to our next
                 workshop – as are
                 we! In fact, we would like to hold similar sessions in other nurseries (ages 3 – 5) around Paris. If you
                 would like to invite us to hold one at your school – please <a href="mailto:asso.actine@gmail.com">e-mail
@@ -223,12 +242,12 @@
     </div>
 </div>
 
-<div id="books" class="parallax sep-3 mt-5 mb-4 reveal"></div>
+<div id="books" class="parallax sep-3 mt-5 mb-4"></div>
 
-<div class="flex-container reveal">
+<div class="container">
     <h1 class="text-center mb-4 display-3">Books</h1>
     <div class="row justify-content-center">
-        <div class="col-xs-12 col-md-10 col-xl-8 reveal">
+        <div class="col">
             <p>We have been working very hard on publishing some of our stories, and are delighted to announce that the
                 first three – part of the Jeunesse Esprits Curieux collection – will be published in November 2018!
                 These books are aimed at children aged 3+, and have been written by members of our group – working
@@ -236,31 +255,70 @@
                 about science. For each book, the author and illustrator have worked hard to make the story both
                 scientifically accurate, as well as exciting and beautiful.
             </p>
-            <p class="reveal"><strong>The first three albums will be available to buy from November 22nd!</strong></p>
+
+            <p><strong>The first three albums are now available to buy! Click on the 'Add to cart' button to add each
+                item to our secure paypal checkout</strong></p>
         </div>
     </div>
 </div>
 
 
-<div class="flex-container mt-5 reveal">
-    <div class="row">
-        <div class="col-md-4 mb-3 reveal text-center">
-            <img src="images/scaled/markova.jpg" alt="Markova" class="img-fluid mx-auto d-block zoom bookhover" width="350"
-                 height="350">
-            <form class="form-inline justify-content-center mt-5 mb-3" target="paypal"
+<div class="container-fluid mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-4 mb-3 justify-content-center text-center">
+            <div class="hvrbox zoom">
+
+                <img src="images/scaled/markova.jpg" alt="Markova" class="img-fluid mx-auto d-block" width="350"
+                     height="350">
+                <!--<div class="hvrbox-layer_top img-fluid mx-auto d-block" width="350" height="350">-->
+                <!--<div class="hvrbox-text fit">Cadhérine est seule à l'intérieur de l'immense cellule biologique. Elle-->
+                <!--rêve d'avoir un ami avec qui elle pourrait jouer. Alors, elle part à sa recherche-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="hvrbox-layer_top img-fluid mx-auto d-block" width="350" height="350">
+                    <div class="hvrbox-text fit"><strong>Cadherin is looking for a friend</strong><br><br>
+                        Cadherin is alone in the huge expanse of the cell. She would love to find someone to play with,
+                        so she goes on an exciting adventure to find one!
+                    </div>
+                </div>
+            </div>
+
+            <form class="justify-content-center form-inline mt-5 mb-3" target="paypal"
                   action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="hosted_button_id" value="FT67N5CAB8MLN">
                 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0"
                        name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+                     height="1">
             </form>
+
             <p><strong>Shipping not currently available</strong></p>
             <p><strong>Only for direct pick up from 11-13 rue Pierre et Marie Curie, 75005 PARIS</strong></p>
+
         </div>
-        <div class="col-md-4 mb-3 reveal text-center">
-            <img src="images/scaled/stefanutti.jpg" alt="Stefanutti" class="img-fluid mx-auto d-block zoom" width="350"
-                 height="350">
+        <div class="col-md-4 mb-3 text-center">
+            <div class="hvrbox zoom">
+                <img src="images/scaled/stefanutti.jpg" alt="Stefanutti" class="img-fluid mx-auto d-block zoom"
+                     width="350" height="350">
+                <!--<div class="hvrbox-layer_top img-fluid mx-auto d-block" width="350" height="350">-->
+                <!--<div class="hvrbox-text fit">L’histoire du système immunitaire-->
+                <!--Enfouie au sein du corps humain, la protéine Kimy est une héroïne d'aujourd'hui. Cette protéine-->
+                <!--du système immunitaire veille constamment à la bonne santé de l'organisme. Un jour, des-->
+                <!--bactéries tentent d'entrer dans le corps. Heureusement, Kimy est là !-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="hvrbox-layer_top img-fluid mx-auto d-block" width="350" height="350">
+                    <div class="hvrbox-text fit"><strong>Kimy sounds the alarm</strong><br><br>
+                        Inside the human body, a Chemokine protein (Kimy, to you and me) performs heroic acts every day.
+                        As a component of the immune
+                        system, she is responsible for maintaining a healthy body. One day, bacteria try to invade the
+                        body - fortunately, Kimy is waiting to stop them!
+                    </div>
+                </div>
+
+            </div>
+
             <form class="form-inline justify-content-center mt-5 mb-3" target="paypal"
                   action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
@@ -269,12 +327,35 @@
                        name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
             </form>
+
             <p><strong>Shipping not currently available</strong></p>
             <p><strong>Only for direct pick up from 11-13 rue Pierre et Marie Curie, 75005 PARIS</strong></p>
+
         </div>
-        <div class="col-md-4 mb-3 reveal text-center">
-            <img src="images/scaled/kuperstein.jpg" alt="Kuperstein" class="img-fluid mx-auto d-block zoom" width="350"
-                 height="350">
+        <div class="col-md-4 mb-3 text-center">
+            <div class="hvrbox zoom">
+
+                <img src="images/scaled/kuperstein.jpg" alt="Kuperstein" class="img-fluid mx-auto d-block zoom"
+                     width="350"
+                     height="350">
+                <!--<div class="hvrbox-layer_top img-fluid mx-auto d-block" width="350" height="350">-->
+                <!--<div class="hvrbox-text fit">Une histoire sur une cellule déréglée-->
+                <!--Toutes les cellules qui composent le corps humain se portent bien quand l'une d'elles se met à-->
+                <!--se multiplier à une vitesse folle. L'ensemble de ces cellules déréglées forme une masse qui-->
+                <!--devient M. Cancer. Vite, il faut trouver une solution avant que M. Cancer prenne toute la place.-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <div class="hvrbox-layer_top img-fluid mx-auto d-block" width="350" height="350">
+                    <div class="hvrbox-text fit"><strong>Mr. Cancer wants to take over</strong><br><br>
+                        All is well in the bdoy until one of the billions of cells starts to multiply at an
+                        incredible rate. All these new cells form a ball that becomes M. Cancer. Quick, we have
+                        to find a solution before Mr. Cancer takes up all the space!
+                    </div>
+                </div>
+            </div>
+
+
             <form class="form-inline justify-content-center mt-5 mb-3" target="paypal"
                   action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
@@ -283,49 +364,87 @@
                        name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
             </form>
+
             <p><strong>Shipping not currently available</strong></p>
             <p><strong>Only for direct pick up from 11-13 rue Pierre et Marie Curie, 75005 PARIS</strong></p>
+
         </div>
+
     </div>
 </div>
 
-<div id="exhibitions" class="parallax sep-4 mt-5 mb-4 reveal"></div>
+<div id="exhibitions" class="parallax sep-4 mt-5 mb-4"></div>
 
-<div class="flex-container reveal">
-    <h1 class="text-center display-3 mb-4">Exhibitions</h1>
-    <div class="row justify-content-center">
-
-        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
-            <img src="images/Exhibition_s.jpg" alt="Poster" class="img-fluid" width="500">
-            <p>
-            </p>
-        </div>
-
-        <div class="col-xs-12 col-md-5 col-xl-4 reveal">
+<div class="container">
+    <h1 class="display-3 text-center mb-4">Exhibitions</h1>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
             <p>To complement the books we are publishing, and to celebrate the beautiful artwork each book contains, we
                 are planning an exhibition ‘Le Jardin de Curiosites’. This will take place over the summer of 2019
-                in the Jardin Curie at the Institut Curie. Please <a href="mailto:asso.actine@gmail.com">e-mail us</a>
+                in the Jardin Curie at the Institut Curie.
+            </p>
+
+            <p>Please <a href="mailto:asso.actine@gmail.com">e-mail us</a>
                 if you would like to find out more, or follow us on social media to keep updated!
             </p>
         </div>
+
+        <div class="col-xs-12 col-md-6 mb-3">
+            <img src="images/Exhibition_s2.jpg" alt="Poster" class="mx-auto d-block img-fluid" width="350"
+                 height="350">
+        </div>
+    </div>
+
+</div>
+
+<div id="join" class="parallax sep-5 mt-5 mb-4"></div>
+
+<div class="container text-center">
+    <h1 class="display-3 mb-4">Join us!</h1>
+    <div class="row justify-content-center mb-4">
+        <div class="col">
+            <p>If you like what we are doing and would like to join our association then you've come to the right
+                place!</p>
+
+            <p>All you have to do is click the download button and read the enclosed documents. In particular, you need
+                to sign the document <i>Bulletin d'adhésion</i> and send it back to us by <a
+                        href="mailto:asso.actine@gmail.com">e-mail</a>.
+            </p>
+            <p>If you have any questions about what this entails, please get in touch with us!</p>
+
+            <a class="btn btn-danger" role="button" href="docs/asso_actin.zip" download="asso_actin">Download</a>
+        </div>
+
+        <!--<form action="#" method="post" name="sign up for beta form">-->
+        <!--<div class="sign-up">-->
+        <!--<p>Sign Up For Actin Art!</p>-->
+        <!--</div>-->
+        <!--<div class="sign-up-description">-->
+        <!--<p>Milkshake is almost ready. If you're interested in testing it out, then sign up below to get-->
+        <!--exclusive access.</p>-->
+        <!--</div>-->
+        <!--<div class="input">-->
+        <!--<input type="text" class="button" id="email" name="email" placeholder="NAME@EXAMPLE.COM">-->
+        <!--<input type="submit" class="button" id="submit" value="SIGN UP">-->
+        <!--</div>-->
+        <!--</form>-->
     </div>
 </div>
 
-<div class="parallax sep-5 mt-5 mb-4 reveal"></div>
+
+<div class="parallax sep-6 mt-5 mb-4"></div>
 
 
-<div class="flex-container text-center reveal">
+<div class="container-fluid text-center">
     <h1 class="display-3 mb-4">Contact</h1>
-
-    <div class="row justify-content-center">
-    <p>Please feel free to <a href="mailto:asso.actine@gmail.com">e-mail us</a> or follow us on our social media
-    accounts if you have any questions or just want to say hi!</p>
-
-    <div class="col-md-12">
-        <iframe src="https://maps.google.com/maps?q=11%20Rue%20Pierre%20et%20Marie%20Curie%2C%2075005%20Paris&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%" height="450" frameborder="0" style="border:0"></iframe>
+    <div class="row justify-content-center mb-4">
+        <p>Please feel free to <a href="mailto:asso.actine@gmail.com">e-mail us</a> or follow us on our social media
+            accounts if you have any questions or just want to say hi!</p>
     </div>
-
+    <div class="row justify-content-center no-gutters">
+        <iframe src="https://maps.google.com/maps?q=11%20Rue%20Pierre%20et%20Marie%20Curie%2C%2075005%20Paris&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="450" frameborder="0"></iframe>
+    </div>
 </div>
 
 <footer class="footer bg-dark">
@@ -335,7 +454,7 @@
         <a href="//www.instagram.com/actine.sciart/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
     </div>
 </footer>
-    
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
