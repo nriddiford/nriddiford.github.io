@@ -6,6 +6,7 @@
 }
 
 html,
+body,
 h1,
 h2,
 h3,
@@ -17,10 +18,10 @@ a {
     font-family: "Raleway", serif;
 }
 
-body {
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
-    line-height: calc(1.5em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
-}
+/*body {*/
+    /*font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));*/
+    /*line-height: calc(1.5em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));*/
+/*}*/
 
 html {
     height: 100% !important;
