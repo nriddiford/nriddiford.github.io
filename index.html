@@ -380,8 +380,8 @@
     <div class="row">
         <div class="col-xs-12 col-md-6">
             <p>To complement the books we are publishing, and to celebrate the beautiful artwork each book contains, we
-                are planning an exhibition ‘Le Jardin de Curiosites’. This will take place over the summer of 2019
-                in the Jardin Curie at the Institut Curie.
+                are planning an exhibition, due to take in the mairie du 5ème (place du pantheon) from the 11th to the
+                20th of March 2019.
             </p>
 
             <p>Please <a href="mailto:asso.actine@gmail.com">e-mail us</a>
@@ -399,36 +399,64 @@
 
 <div id="join" class="parallax sep-5 mt-5 mb-4"></div>
 
-<div class="container text-center">
-    <h1 class="display-3 mb-4">Join us!</h1>
-    <div class="row justify-content-center mb-4">
-        <div class="col">
+<div class="container">
+    <h1 class="display-3 text-center mb-4">Join us!</h1>
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1 class="text-center mb-2">Read the docs</h1>
+
             <p>If you like what we are doing and would like to join our association then you've come to the right
                 place!</p>
 
-            <p>All you have to do is click the download button and read the enclosed documents. In particular, you need
-                to sign the document <i>Bulletin d'adhésion</i> and send it back to us by <a
+            <p>To join our association you will need to to sign the document <i>Bulletin d'adhésion</i> (click on the
+                'Download' button below) and send it back to us by <a
                         href="mailto:asso.actine@gmail.com">e-mail</a>.
             </p>
-            <p>If you have any questions about what this entails, please get in touch with us!</p>
+        </div>
+        <div class="col-sm-6">
+            <h1 class="text-center mb-2">Sign up</h1>
+
+            <p>As we are a not for profit association, we will also need to receive a payment of €5 to cover
+                administration costs etc.</p>
+            <p>You can make this payment securely via Paypal by clicking the 'Sign up' button below.
+                If you have any questions about what this entails, please get in touch with us!</p>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-sm-6 mb-2">
 
             <a class="btn btn-danger" role="button" href="docs/asso_actin.zip" download="asso_actin">Download</a>
         </div>
 
-        <!--<form action="#" method="post" name="sign up for beta form">-->
-        <!--<div class="sign-up">-->
-        <!--<p>Sign Up For Actin Art!</p>-->
-        <!--</div>-->
-        <!--<div class="sign-up-description">-->
-        <!--<p>Milkshake is almost ready. If you're interested in testing it out, then sign up below to get-->
-        <!--exclusive access.</p>-->
-        <!--</div>-->
-        <!--<div class="input">-->
-        <!--<input type="text" class="button" id="email" name="email" placeholder="NAME@EXAMPLE.COM">-->
-        <!--<input type="submit" class="button" id="submit" value="SIGN UP">-->
-        <!--</div>-->
-        <!--</form>-->
+        <div class="col-sm-6 mb-2">
+
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="GTRGZHDWBCAH4">
+                <!--<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+                <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+                <!--<button name="submit" title="Pay via PayPal - The safer, easier way to pay online!"> Sign up! <i class="fab fa-paypal"></i></button>-->
+                <button class="btn btn-success" role="button">Sign up! <i class="fab fa-paypal "></i></button>
+            </form>
+        </div>
+
     </div>
+
+
+    <!--<form action="#" method="post" name="sign up for beta form">-->
+    <!--<div class="sign-up">-->
+    <!--<p>Sign Up For Actin Art!</p>-->
+    <!--</div>-->
+    <!--<div class="sign-up-description">-->
+    <!--<p>Milkshake is almost ready. If you're interested in testing it out, then sign up below to get-->
+    <!--exclusive access.</p>-->
+    <!--</div>-->
+    <!--<div class="input">-->
+    <!--<input type="text" class="button" id="email" name="email" placeholder="NAME@EXAMPLE.COM">-->
+    <!--<input type="submit" class="button" id="submit" value="SIGN UP">-->
+    <!--</div>-->
+    <!--</form>-->
 </div>
 
 
@@ -467,5 +495,6 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script type="text/javascript" src='js/main.js'></script>
+<script type="text/javascript" src='js/screen_breaks.js'></script>
 </body>
 </html>
