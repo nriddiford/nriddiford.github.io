@@ -5,8 +5,8 @@
         background-image: url(../images/Book_example_cad_xs.jpg);
     }
     .card-deck {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
     .description {
         top: 15%;
