@@ -24,7 +24,7 @@ $(document).ready(function(){
                 scrollTop: $(element).offset().top-nav_offset}, 1000, function(){
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 // THis was causing problems 13.11.18
-                window.location.hash = element;
+                // window.location.hash = element;
             });
         } // End if
     });
