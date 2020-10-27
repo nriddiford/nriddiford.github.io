@@ -237,6 +237,12 @@
                 about science. For each book, the author and illustrator worked together to make the story both
                 scientifically accurate, as well as exciting and beautiful.
             </p>
+            
+            <p> !! NEW !! -  Mailing available! To receive books at home, orger them at Esptrits Curieux collection website.
+            
+            <a href="https://espritscurieux.com/boutique/">
+                <button class="btn btn-lg btn-success" role="button" >Deliver Esprits Curieux to my home </button></a> 
+            </p>
 
         </div>
     </div>
@@ -269,6 +275,12 @@
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
                      height="1">
             </form>
+            
+            
+
+
+
+            
 
             <p><strong>Shipping not currently available</strong></p>
             <p><strong>Only for direct pick up from 11-13 rue Pierre et Marie Curie, 75005 PARIS</strong></p>
@@ -505,6 +517,9 @@
  
             <p>Entries will be judged by scientists and proffessional youth editor to ensure scientific accuracy, the accessibility to kids and the interest to the general public.
             </p> 
+             
+             <a href="https://espritscurieux.com/participation-form">
+             <button class="btn btn-lg btn-success" role="button" >Participate! </button></a>
             </div>
          </div>
          </div>
@@ -528,39 +543,101 @@
          
    
       -->      
-          
-  
-
-<div id="exhibitions" class="parallax sep-7 mt-5 mb-4"></div>
-
-<div class="container">
-    <h1 class="display-4 text-center mb-5">Exhibitions</h1>
-    <div class="row">
-        <div class="col-xs-12 col-md-6">
-            <p>To celebrate the beautiful artwork each book contains, we do art exhibitions, that show original watercolor illustrations.
-            </p>    
-        </div>
-
-        <div class="col-xs-12 col-md-6 mb-3">
-            <img src="images/Exhibition_s.jpg" alt="Poster" class="mx-auto d-block img-fluid" width="350"
-                 height="350">
-        </div>
+<!-- <div id="contest submission" class="container"> 
+    
+    <h2 class="display-4 text-center mb-5">Participate now!</h2>
+    <form method="post" action="//submit.form" onSubmit="return validateForm();">
+    <div style="max-width: 400px;">
     </div>
+    <div style="padding-bottom: 18px;">Book Title<span style="color: red;"> *</span><br/>
+    <input type="text" id="data_1" name="data_1" style="max-width : 450px;" class="form-control"/>
+    </div>
+    <div style="padding-bottom: 18px;">Subtitle<br/>
+    <input type="text" id="data_2" name="data_2" style="max-width : 450px;" class="form-control"/>
+    </div>
+    <div style="display: flex; padding-bottom: 18px;max-width : 450px;">
+    <div style=" margin-left: 0; margin-right: 1%; max-width: 49%;">Your first name<span style="color: red;"> *</span><br/>
+    <input type="text" id="data_3" name="data_3" style="max-width: 100%;" class="form-control"/>
+    </div>
+    <div style=" margin-left: 1%; margin-right: 0; max-width: 49%;">Your last name<span style="color: red;"> *</span><br/>
+    <input type="text" id="data_4" name="data_4" style="max-width: 100%;" class="form-control"/>
+    </div>
+    </div><div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
+    <input type="text" id="data_8" name="data_8" style="max-width : 450px;" class="form-control"/>
+    </div>
+    <div style="padding-bottom: 18px;">Author Bio ( 10-20 words ) to put on the book cover<br/>
+    <textarea id="data_9" false name="data_9" style="max-width : 450px;" rows="6" class="form-control"></textarea>
+    </div>
+    <div style="padding-bottom: 18px;">Story description ( 20-60 words ) to put on the book cover<br/>
+    <textarea id="data_10" false name="data_10" style="max-width : 450px;" rows="6" class="form-control"></textarea>
+    </div>
+    <div style="padding-bottom: 18px;">Scientific adventure story for kids (300 - 700 words)<span style="color: red;"> *</span><br/>
+    <textarea id="data_11" false name="data_11" style="max-width : 450px;" rows="20" class="form-control"></textarea>
+    </div>
+    <div style="padding-bottom: 18px;">Glossary - tel to general public who are the heros of your story<br/>
+    <textarea id="data_12" false name="data_12" style="max-width : 450px;" rows="10" class="form-control"></textarea>
+    </div>
+    <div class="btn btn-lg btn-success" style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit my Entry for Exptrits Curieux contest !" type="submit"/></div>
+    <div>
+                            
+    <div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+    <script src="https://www.100forms.com/js/FORMKEY:MWS2FCYNFHNW/SEND:asso.actine@gmail.com" type="text/javascript"></script>
+    </div>
+    </form>
+-->
+    
+
+    
+    <script type="text/javascript">
+    function validateForm() {
+    if (isEmpty(document.getElementById('data_1').value.trim())) {
+    alert('Title is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('data_3').value.trim())) {
+    alert('First name is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('data_4').value.trim())) {
+    alert('Last name is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('data_8').value.trim())) {
+    alert('Email is required!');
+    return false;
+    }
+    if (!validateEmail(document.getElementById('data_8').value.trim())) {
+    alert('Email must be a valid email address!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('data_11').value.trim())) {
+    alert('Scientific adventure story for kids (300 - 700 words) is required!');
+    return false;
+    }
+    return true;
+    }
+    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+    function validateEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+    return isEmpty(email) || re.test(email);
+    }
+    </script>
+    
+    
+    
+ <!--   Username: asso.actine@gmail.com
+Password: xkrtzgxh5s -->
 </div>
 
+    
+    
 <div id="newsletter" class="parallax sep-7 mt-5 mb-4"></div>
     
 <div class="container-fluid  text-center">
     <h5 class="display-4 text-center mb-5">Newsletter</h5>
     <div class="row justify-content-center">
         
-         <p> To know about new Actine Association books and upcoming events subscribe to Actine News letter </p>
-  <!---  <div class = "email-box">
-        <input type="email" name="" value="" placeholder="Enter your email">
-        <a href="http://olgamarkova.net/subscription-to-newsletter/" ><button type="button" name="button">Subscribe </button> </a>
-    </div>
---->
-    
+         <p> To know about new Actine Association books and upcoming events subscribe to Actine News letter </p>   
     
         <form method="post" action="//submit.form" onSubmit="return validateForm();">
         <div style="max-width: 400px;">
@@ -577,10 +654,11 @@
             <!--- button use code from website: 100forms.com
         to log in use:
         Username: markoolga@gmail.com
-        Password: dykb2nmae3   --->
-    
+        Password: dykb2nmae3   --->    
         
-    </div></div>
+    </div>
+    </div>
+</div>
     
     
 <div id="join" class="parallax sep-7 mt-5 mb-4"></div>
@@ -624,7 +702,7 @@
 
         <div class="col-sm-6 text-center mt-4 mb-4 order-2 order-sm-3">
 
-            <a class="btn btn-lg btn-success" role="button" href="docs/asso_actin.zip" download="asso_actin">Download <i class="fa fa-download"></i></a>
+            <a class="btn btn-lg btn-success" role="button" href="docs/asso_actin.zip" download="asso_actin.zip">Download <i class="fa fa-download"></i></a>
         </div>
 
         <div class="col-sm-6 mt-4 mb-4 text-center order-4 order-sm-4">
