@@ -1,0 +1,146 @@
+@import '@radix-ui/themes/styles.css';
+@import 'tailwindcss';
+
+/* Forthdot Color Variables - Professional Blues */
+:root, .light, .light-theme {
+  /* Brand colors */
+  --brand-blue: #6BA3D0;
+  --brand-blue-light: #8BBCE0;
+  --brand-blue-dark: #5891BE;
+  
+  /* Grays */
+  --gray-1: #fcfcfd;
+  --gray-2: #f8f9fa;
+  --gray-3: #e9ecef;
+  --gray-4: #dee2e6;
+  --gray-9: #868e96;
+  --gray-11: #495057;
+  --gray-12: #212529;
+  
+  /* Semantic colors */
+  --color-background: #fafbfc;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1f3f5;
+  --text-faded: #6c757d;
+  --text-contrast: #212529;
+  --text-inverse: #f8f9fa;
+  --text-highlight: #6BA3D0;
+  --color-icon: #495057;
+  
+  /* HSL values for Tailwind */
+  --background: 210 20% 99%;
+  --foreground: 210 10% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 10% 15%;
+  --primary: 205 50% 62%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 15% 96%;
+  --secondary-foreground: 210 10% 20%;
+  --muted: 210 15% 95%;
+  --muted-foreground: 210 10% 45%;
+  --accent: 205 50% 62%;
+  --accent-foreground: 0 0% 100%;
+  --border: 210 15% 88%;
+  --ring: 205 50% 62%;
+  --radius: 0.5rem;
+}
+
+.dark, .dark-theme {
+  /* Brand colors */
+  --brand-blue: #6BA3D0;
+  --brand-blue-light: #8BBCE0;
+  --brand-blue-dark: #5891BE;
+  
+  /* Grays */
+  --gray-1: #1a1a1a;
+  --gray-2: #242424;
+  --gray-3: #2e2e2e;
+  --gray-4: #383838;
+  --gray-9: #a0a0a0;
+  --gray-11: #d0d0d0;
+  --gray-12: #efefef;
+  
+  /* Semantic colors */
+  --color-background: #0a0a0a;
+  --color-surface: #121212;
+  --color-surface-2: #1a1a1a;
+  --text-faded: #9ca3af;
+  --text-contrast: #ffffff;
+  --text-inverse: #1a1a1a;
+  --text-highlight: #6BA3D0;
+  --color-icon: #d0d0d0;
+  
+  /* HSL values for Tailwind */
+  --background: 0 0% 4%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 98%;
+  --primary: 205 50% 62%;
+  --primary-foreground: 0 0% 4%;
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 62%;
+  --accent: 205 50% 62%;
+  --accent-foreground: 0 0% 98%;
+  --border: 0 0% 15%;
+  --ring: 205 50% 62%;
+}
+
+/* Base styling */
+html, body, :root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Radix UI overrides */
+:where(.radix-themes) .rt-Heading {
+  font-weight: 300 !important;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom gradient backgrounds */
+.gradient-mesh {
+  background: 
+    radial-gradient(at 40% 20%, hsla(210, 70%, 50%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(190, 70%, 50%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(200, 70%, 50%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(195, 70%, 50%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(205, 70%, 50%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(185, 70%, 50%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(215, 70%, 50%, 0.15) 0px, transparent 50%);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
