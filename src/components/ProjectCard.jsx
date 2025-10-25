@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Card,
   Flex,
   Heading,
@@ -35,15 +36,16 @@ export default function ProjectCard({
   return (
     <Flex
       direction={{ initial: "column", md: reversed ? "row-reverse" : "row" }}
-      gap="6"
+      gap={{ initial: "6", md: "6", lg: "8" }}
       align="center"
-      className="py-8 md:py-12"
+      className="py-6 md:py-8 lg:py-12"
     >
       {/* Visual Side */}
-      <Box className="w-full md:w-1/2">
+      <Box className="w-full md:w-1/2 px-4 md:px-0">
         <Card
           size="4"
-          className="group overflow-hidden relative transition-all duration-300 hover:translate-y-[-4px]"
+          onClick={() => window.open(websiteUrl, "_blank")}
+          className="group overflow-hidden relative transition-all duration-200 hover:translate-y-[-2px] cursor-pointer"
           style={{
             background: "rgba(18, 18, 18, 0.8)",
             backdropFilter: "blur(20px)",
@@ -52,15 +54,18 @@ export default function ProjectCard({
           }}
         >
           <div
-            className={`absolute inset-0 bg-gradient-to-br ${accentColors[accentColor]} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{
+              background: "linear-gradient(135deg, rgba(107, 163, 208, 0.03), rgba(107, 163, 208, 0.01))",
+            }}
           ></div>
 
           <Flex
             direction="column"
             align="center"
             justify="center"
-            className="relative z-10 p-12 md:p-16"
-            gap="6"
+            className="relative z-10 p-8 md:p-12 lg:p-16"
+            gap={{ initial: "4", md: "6" }}
           >
             {/* Large Icon */}
             <Box className="relative">
@@ -70,7 +75,7 @@ export default function ProjectCard({
               <Flex
                 align="center"
                 justify="center"
-                className="relative w-28 h-28 md:w-36 md:h-36 rounded-3xl transition-transform duration-300 group-hover:scale-110"
+                className="relative w-24 h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-3xl transition-transform duration-200 group-hover:scale-105"
                 style={{
                   background:
                     "linear-gradient(135deg, rgba(107, 163, 208, 0.1), rgba(107, 163, 208, 0.05))",
@@ -79,8 +84,8 @@ export default function ProjectCard({
                 }}
               >
                 <Icon
-                  size={72}
-                  className={iconColors[accentColor]}
+                  size={56}
+                  className={`${iconColors[accentColor]} md:w-16 md:h-16 lg:w-18 lg:h-18`}
                   strokeWidth={1.2}
                 />
               </Flex>
@@ -88,8 +93,9 @@ export default function ProjectCard({
 
             {/* Logo/Title */}
             <Heading
-              size="8"
-              className="font-light text-center transition-colors duration-300 group-hover:text-blue-300"
+              size={{ initial: "6", md: "7", lg: "8" }}
+              className="font-light text-center transition-colors duration-200"
+              style={{ color: "var(--text-contrast)" }}
             >
               {title}
             </Heading>
@@ -99,7 +105,7 @@ export default function ProjectCard({
               <Text size="2">View Project</Text>
               <ArrowUpRight
                 size={16}
-                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </Flex>
           </Flex>
@@ -107,11 +113,11 @@ export default function ProjectCard({
       </Box>
 
       {/* Content Side */}
-      <Flex direction="column" gap="5" className="w-full md:w-1/2">
+      <Flex direction="column" gap={{ initial: "4", md: "5" }} className="w-full md:w-1/2 px-4 md:px-0">
         <Box>
           <Heading
-            size="8"
-            className="font-light mb-3"
+            size={{ initial: "6", md: "7", lg: "8" }}
+            className="font-light mb-4 md:mb-6"
             style={{ letterSpacing: "-0.02em" }}
           >
             {title}
@@ -119,7 +125,7 @@ export default function ProjectCard({
 
           {/* Tags */}
           {tags && (
-            <Flex gap="2" wrap="wrap" className="mb-4">
+            <Flex gap="2" wrap="wrap" className="mt-2">
               {tags.map((tag, index) => (
                 <Box
                   key={index}
@@ -138,16 +144,16 @@ export default function ProjectCard({
         </Box>
 
         <Text
-          size="4"
+          size={{ initial: "3", md: "4" }}
           style={{ color: "var(--text-faded)", lineHeight: "1.8" }}
         >
           {description}
         </Text>
 
         {/* Features List */}
-        <Box className="space-y-3 mt-2">
+        <Box className="space-y-2 md:space-y-3 mt-2">
           <Text
-            size="2"
+            size={{ initial: "1", md: "2" }}
             weight="medium"
             style={{
               color: "var(--text-contrast)",
@@ -157,7 +163,7 @@ export default function ProjectCard({
           >
             Key Features
           </Text>
-          <Flex direction="column" gap="3">
+          <Flex direction="column" gap={{ initial: "2", md: "3" }}>
             {features.map((feature, index) => (
               <Flex key={index} gap="3" align="start">
                 <div
@@ -172,7 +178,7 @@ export default function ProjectCard({
                   } mt-2 flex-shrink-0`}
                 ></div>
                 <Text
-                  size="3"
+                  size={{ initial: "2", md: "3" }}
                   style={{ color: "var(--gray-11)", lineHeight: "1.6" }}
                 >
                   {feature}
@@ -183,7 +189,7 @@ export default function ProjectCard({
         </Box>
 
         {/* Action Buttons */}
-        <Flex gap="3" className="mt-6">
+        <Flex gap="3" className="mt-4 md:mt-6" wrap="wrap">
           {websiteUrl && (
             <Box
               onClick={() => window.open(websiteUrl, "_blank")}
@@ -211,25 +217,15 @@ export default function ProjectCard({
           )}
 
           {githubUrl && (
-            <Box
+            <Button
+              size="3"
+              variant="ghost"
               onClick={() => window.open(githubUrl, "_blank")}
-              className="cursor-pointer px-6 py-3 rounded-lg transition-all duration-300 hover:translate-y-[-2px]"
-              style={{
-                background: "rgba(255, 255, 255, 0.05)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-              }}
+              className="cursor-pointer"
             >
-              <Flex align="center" gap="2">
-                <Github size={16} style={{ color: "var(--text-faded)" }} />
-                <Text
-                  size="3"
-                  weight="medium"
-                  style={{ color: "var(--text-faded)" }}
-                >
-                  GitHub
-                </Text>
-              </Flex>
-            </Box>
+              <Github size={16} />
+              GitHub
+            </Button>
           )}
         </Flex>
       </Flex>

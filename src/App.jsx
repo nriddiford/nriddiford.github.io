@@ -27,13 +27,13 @@ function App() {
       <Stats />
 
       {/* Projects Section */}
-      <Section size="3" className="py-16">
-        <Container size="4">
+      <Section size="3" className="py-8 md:py-12 lg:py-16">
+        <Container size="4" className="px-4 md:px-6">
           {/* Section Header */}
-          <Box className="text-center mb-16">
+          <Box className="text-center mb-8 md:mb-12 lg:mb-16">
             <Heading
-              size="8"
-              className="font-light mb-4"
+              size={{ initial: "6", md: "7", lg: "8" }}
+              className="font-light mb-3 md:mb-4"
               style={{
                 background: "linear-gradient(to right, #fff, #a0a0a0)",
                 WebkitBackgroundClip: "text",
@@ -43,7 +43,7 @@ function App() {
             >
               Our Projects
             </Heading>
-            <Text size="4" style={{ color: "var(--text-faded)" }}>
+            <Text size={{ initial: "3", md: "4" }} style={{ color: "var(--text-faded)" }}>
               Innovative solutions that make an impact
             </Text>
           </Box>
@@ -52,7 +52,7 @@ function App() {
           <ProjectCard
             title="researching.io"
             description="A career transition platform connecting PhD students and postdocs with mentors who have successfully moved from academia to industry. Helping early career researchers discover opportunities, upskill, and connect with companies seeking PhD-level talent."
-            tags={["Career Platform", "Mentorship", "Community", "Free"]}
+            tags={["Career Transitions", "Mentorship", "Recruitment", "Job Board"]}
             features={[
               "Connect with an international network of PhD mentors",
               "Get career advice from ex-academics in various industries",
@@ -61,7 +61,7 @@ function App() {
               "Free platform for mentees, mentors, and companies",
             ]}
             icon={Brain}
-            websiteUrl="https://researching.io"
+            websiteUrl="https://www.researching.io"
             githubUrl="https://github.com/nriddiford/researching"
             accentColor="blue"
             reversed={false}
@@ -73,7 +73,7 @@ function App() {
           <ProjectCard
             title="jamdar"
             description="A community platform connecting musicians in their local area. Jamdar makes it easy to find jam buddies, discover local music events, and build your music network. Not just a platform — your local music map!"
-            tags={["Music Platform", "Community", "Geolocation", "PWA"]}
+            tags={["Community Building", "Find Musicians", "Start a Band", "Connect"]}
             features={[
               "Interactive map showing musicians in your neighborhood",
               "Advanced filtering by instrument, genre, and skill level",
@@ -94,31 +94,31 @@ function App() {
       {/* Call to Action Section */}
       <Section
         size="3"
-        className="py-16"
+        className="py-8 md:py-12 lg:py-16"
         style={{
           background:
             "linear-gradient(to bottom, transparent, var(--color-surface))",
         }}
       >
-        <Container size="3">
+        <Container size="3" className="px-4 md:px-6">
           <Box
-            className="glass p-8 md:p-12 rounded-3xl text-center"
+            className="glass p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl text-center"
             style={{
               background: "rgba(255, 255, 255, 0.02)",
               backdropFilter: "blur(20px)",
               border: "1px solid rgba(255, 255, 255, 0.05)",
             }}
           >
-            <Heading size="6" className="font-light mb-4">
+            <Heading size={{ initial: "5", md: "6" }} className="font-light mb-3 md:mb-4">
               Interested in collaborating?
             </Heading>
             <Text
-              size="3"
+              size={{ initial: "2", md: "3" }}
               style={{ color: "var(--text-faded)" }}
-              className="mb-6 block"
+              className="mb-4 md:mb-6 block"
             >
               We're always looking for interesting projects and partnerships.
-              <br />
+              <br className="hidden md:block" />
               Get in touch to discuss how we can work together.
             </Text>
             <a href="mailto:nick@forthdot.com" className="inline-block">

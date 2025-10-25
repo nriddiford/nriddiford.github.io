@@ -4,8 +4,8 @@ export default function Stats() {
   const stats = [
     { value: "2", label: "Active Projects" },
     { value: "10K+", label: "Active Users" },
-    { value: "100%", label: "Open Source" },
-    { value: "2024", label: "Founded" },
+    { value: "100%", label: "Free" },
+    { value: "2019", label: "Founded" },
   ];
 
   return (
@@ -16,12 +16,12 @@ export default function Stats() {
         background: "rgba(0, 0, 0, 0.2)",
       }}
     >
-      <Container size="4">
+      <Container size="4" className="px-4 md:px-6">
         <Flex
           direction={{ initial: "column", sm: "row" }}
           justify="between"
-          gap="6"
-          className="py-8"
+          gap={{ initial: "4", sm: "6" }}
+          className="py-6 md:py-8"
         >
           {stats.map((stat, index) => (
             <Flex
@@ -32,7 +32,7 @@ export default function Stats() {
               className="flex-1"
             >
               <Text
-                size="8"
+                size={{ initial: "7", md: "8" }}
                 weight="bold"
                 style={{
                   color: "var(--brand-blue)",
@@ -42,7 +42,7 @@ export default function Stats() {
                 {stat.value}
               </Text>
               <Text
-                size="2"
+                size={{ initial: "1", md: "2" }}
                 style={{
                   color: "var(--text-faded)",
                   textTransform: "uppercase",
