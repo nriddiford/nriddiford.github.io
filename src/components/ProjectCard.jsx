@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Card,
-  Flex,
-  Heading,
-  Text,
-} from "@radix-ui/themes";
+import { Box, Button, Card, Flex, Heading, Text } from "@radix-ui/themes";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
 export default function ProjectCard({
@@ -56,7 +49,8 @@ export default function ProjectCard({
           <div
             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             style={{
-              background: "linear-gradient(135deg, rgba(107, 163, 208, 0.03), rgba(107, 163, 208, 0.01))",
+              background:
+                "linear-gradient(135deg, rgba(107, 163, 208, 0.03), rgba(107, 163, 208, 0.01))",
             }}
           ></div>
 
@@ -100,20 +94,21 @@ export default function ProjectCard({
               {title}
             </Heading>
 
-            {/* Subtle indicator */}
-            <Flex align="center" gap="2" style={{ color: "var(--text-faded)" }}>
-              <Text size="2">View Project</Text>
-              <ArrowUpRight
-                size={16}
-                className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </Flex>
+            {/* View Project Button */}
+            <Button size="2" variant="soft" className="mt-2">
+              View Project
+              <ArrowUpRight size={14} />
+            </Button>
           </Flex>
         </Card>
       </Box>
 
       {/* Content Side */}
-      <Flex direction="column" gap={{ initial: "4", md: "5" }} className="w-full md:w-1/2 px-4 md:px-0">
+      <Flex
+        direction="column"
+        gap={{ initial: "4", md: "5" }}
+        className="w-full md:w-1/2 px-4 md:px-0"
+      >
         <Box>
           <Heading
             size={{ initial: "6", md: "7", lg: "8" }}
@@ -217,15 +212,25 @@ export default function ProjectCard({
           )}
 
           {githubUrl && (
-            <Button
-              size="3"
-              variant="ghost"
+            <Box
               onClick={() => window.open(githubUrl, "_blank")}
-              className="cursor-pointer"
+              className="cursor-pointer px-6 py-3 rounded-lg transition-all duration-300 hover:translate-y-[-2px]"
+              style={{
+                background: "rgba(255, 255, 255, 0.05)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+              }}
             >
-              <Github size={16} />
-              GitHub
-            </Button>
+              <Flex align="center" gap="2">
+                <Github size={16} style={{ color: "var(--text-faded)" }} />
+                <Text
+                  size="3"
+                  weight="medium"
+                  style={{ color: "var(--text-faded)" }}
+                >
+                  GitHub
+                </Text>
+              </Flex>
+            </Box>
           )}
         </Flex>
       </Flex>

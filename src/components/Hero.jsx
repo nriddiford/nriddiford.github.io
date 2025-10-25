@@ -18,7 +18,12 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
 
       <Container size="4" className="relative z-10 px-4 md:px-6">
-        <Flex direction="column" align="center" gap={{ initial: "4", md: "6" }} className="text-center">
+        <Flex
+          direction="column"
+          align="center"
+          gap={{ initial: "4", md: "6" }}
+          className="text-center"
+        >
           {/* Logo/Brand Icon */}
           <Box className="relative">
             <div className="absolute inset-0 bg-blue-400/20 blur-xl animate-pulse"></div>
@@ -47,7 +52,10 @@ export default function Hero() {
 
           {/* Tagline */}
           <Box className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-blue-400/20 bg-blue-400/5">
-            <Text size={{ initial: "1", md: "2" }} style={{ color: "var(--brand-blue)" }}>
+            <Text
+              size={{ initial: "1", md: "2" }}
+              style={{ color: "var(--brand-blue)" }}
+            >
               Software Development & Product Design
             </Text>
           </Box>
