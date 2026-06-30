@@ -1,111 +1,58 @@
-import { Box, Container, Flex, Text, Separator } from "@radix-ui/themes";
 import { Github, Mail } from "lucide-react";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <Box
-      className="py-12"
-      style={{
-        background: "var(--color-surface)",
-        borderTop: "1px solid var(--gray-4)",
-      }}
-    >
-      <Container size="4">
-        <Flex direction="column" gap="6">
-          {/* Main Footer Content */}
-          <Flex
-            direction={{ initial: "column", md: "row" }}
-            justify="between"
-            align={{ initial: "center", md: "start" }}
-            gap="6"
-          >
-            {/* Brand Section */}
-            <Flex
-              direction="column"
-              gap="2"
-              align={{ initial: "center", md: "start" }}
-            >
-              <Text size="5" weight="medium" className="font-light">
-                forthdot
-              </Text>
-              <Text size="2" style={{ color: "var(--gray-11)" }}>
-                Building the future, one project at a time
-              </Text>
-            </Flex>
-
-            {/* Links Section */}
-            <Flex
-              direction="column"
-              gap="3"
-              align={{ initial: "center", md: "end" }}
-            >
-              <Text
-                size="2"
-                weight="medium"
-                style={{ color: "var(--gray-12)" }}
+    <footer style={{ borderTop: "1px solid var(--line)" }}>
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 py-10 md:py-12">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-0 md:items-end md:justify-between">
+          <div>
+            <a href="#top" className="flex items-center gap-2.5 mb-3" aria-label="forthdot - home">
+              <svg width="14" height="14" viewBox="0 0 240 240" aria-hidden="true">
+                <circle cx="50" cy="170" r="30" fill="#EFEFEF" />
+                <circle cx="95" cy="70" r="30" fill="#EFEFEF" />
+                <circle cx="140" cy="170" r="30" fill="#EFEFEF" />
+                <circle cx="185" cy="70" r="30" fill="var(--accent)" />
+              </svg>
+              <span
+                style={{
+                  color: "var(--fg)",
+                  fontWeight: 600,
+                  fontSize: 14,
+                  letterSpacing: "-0.01em",
+                }}
               >
-                Connect
-              </Text>
-              <Flex gap="4">
-                <a
-                  href="https://github.com/nriddiford"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group"
-                  aria-label="GitHub"
-                >
-                  <Flex
-                    align="center"
-                    justify="center"
-                    className="w-10 h-10 rounded-lg glass transition-all hover:scale-110"
-                    style={{
-                      background: "rgba(255, 255, 255, 0.05)",
-                    }}
-                  >
-                    <Github
-                      size={20}
-                      className="transition-colors group-hover:text-blue-400"
-                      style={{ color: "var(--gray-11)" }}
-                    />
-                  </Flex>
-                </a>
+                forthdot
+              </span>
+            </a>
+            <p
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: "var(--fg-subtle)",
+                letterSpacing: "0.1em",
+                margin: 0,
+              }}
+            >
+              © {new Date().getFullYear()} - Independent studio
+            </p>
+          </div>
 
-                <a
-                  href="mailto:nick@forthdot.com"
-                  className="group"
-                  aria-label="Email"
-                >
-                  <Flex
-                    align="center"
-                    justify="center"
-                    className="w-10 h-10 rounded-lg glass transition-all hover:scale-110"
-                    style={{
-                      background: "rgba(255, 255, 255, 0.05)",
-                    }}
-                  >
-                    <Mail
-                      size={20}
-                      className="transition-colors group-hover:text-blue-400"
-                      style={{ color: "var(--gray-11)" }}
-                    />
-                  </Flex>
-                </a>
-              </Flex>
-            </Flex>
-          </Flex>
-
-          <Separator size="4" />
-
-          {/* Copyright */}
-          <Flex justify="center">
-            <Text size="2" style={{ color: "var(--gray-11)" }}>
-              © {currentYear} forthdot. All rights reserved.
-            </Text>
-          </Flex>
-        </Flex>
-      </Container>
-    </Box>
+          <div className="flex items-center gap-5">
+            <a
+              href="https://github.com/nriddiford"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="quiet"
+              aria-label="GitHub"
+            >
+              <Github size={16} />
+            </a>
+            <a href="mailto:nickriddiford@me.com" className="quiet" aria-label="Email">
+              <Mail size={16} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }

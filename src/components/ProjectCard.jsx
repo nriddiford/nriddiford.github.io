@@ -1,239 +1,323 @@
-import { Box, Button, Card, Flex, Heading, Text } from "@radix-ui/themes";
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
+import { handleSpotlight, withAlpha, solidHex } from "../lib/interactions";
 
 export default function ProjectCard({
+  index,
+  total,
   title,
+  year,
+  role,
+  tagline,
   description,
   features,
-  tags,
-  icon: Icon,
+  stats,
+  logoSrc,
   websiteUrl,
   githubUrl,
-  reversed = false,
-  accentColor = "blue",
+  accent = "var(--accent)",
+  isLast,
 }) {
-  const accentColors = {
-    blue: "from-blue-400/10 to-blue-500/10",
-    cyan: "from-cyan-400/10 to-blue-400/10",
-    slate: "from-slate-400/10 to-slate-500/10",
-    sky: "from-sky-400/10 to-blue-500/10",
-  };
-
-  const iconColors = {
-    blue: "text-blue-400",
-    cyan: "text-cyan-400",
-    slate: "text-slate-400",
-    sky: "text-sky-400",
-  };
+  const accentBase = solidHex(accent);
+  const domain = (() => {
+    try { return new URL(websiteUrl).hostname.replace(/^www\./, ""); }
+    catch { return ""; }
+  })();
 
   return (
-    <Flex
-      direction={{ initial: "column", md: reversed ? "row-reverse" : "row" }}
-      gap={{ initial: "6", md: "6", lg: "8" }}
-      align="center"
-      className="py-6 md:py-8 lg:py-12"
+    <article
+      className="grid md:grid-cols-12 gap-10 md:gap-14 py-16 md:py-24"
+      style={isLast ? {} : { borderBottom: "1px solid var(--line)" }}
     >
-      {/* Visual Side */}
-      <Box className="w-full md:w-1/2 px-4 md:px-0">
-        <Card
-          size="4"
-          onClick={() => window.open(websiteUrl, "_blank")}
-          className="group overflow-hidden relative transition-all duration-200 hover:translate-y-[-2px] cursor-pointer"
+      {/* ── Left: meta + visual ─────────────────────────── */}
+      <div className="md:col-span-5">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="mono" style={{ fontSize: 12, color: "var(--fg-subtle)", letterSpacing: "0.04em" }}>
+            {index} / {String(total).padStart(2, "0")}
+          </span>
+          <span style={{ width: 16, height: 1, background: "var(--line-strong)" }} aria-hidden="true" />
+          <span className="mono" style={{ fontSize: 12, color: "var(--fg-subtle)", letterSpacing: "0.04em" }}>
+            {year}
+          </span>
+        </div>
+
+        <a
+          href={websiteUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onPointerMove={handleSpotlight}
+          className="group spotlight block overflow-hidden"
           style={{
-            background: "rgba(18, 18, 18, 0.8)",
-            backdropFilter: "blur(20px)",
-            border: "1px solid rgba(107, 163, 208, 0.1)",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
+            aspectRatio: "5 / 4",
+            borderRadius: 14,
+            border: "1px solid var(--line)",
+            background: `radial-gradient(120% 90% at 20% 0%, ${withAlpha(accentBase, 0.10)}, transparent 55%), var(--bg-elev)`,
+            transition: "border-color 0.3s ease",
+            ["--spot-color"]: withAlpha(accentBase, 0.16),
+            ["--spot-size"]: "320px",
           }}
         >
-          <div
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          {/* TL - domain (lowercase, no uppercase transform) */}
+          <span
+            className="absolute mono"
             style={{
-              background:
-                "linear-gradient(135deg, rgba(107, 163, 208, 0.03), rgba(107, 163, 208, 0.01))",
+              top: 14,
+              left: 16,
+              fontSize: 10.5,
+              letterSpacing: "0.06em",
+              color: "var(--fg-subtle)",
             }}
-          ></div>
-
-          <Flex
-            direction="column"
-            align="center"
-            justify="center"
-            className="relative z-10 p-8 md:p-12 lg:p-16"
-            gap={{ initial: "4", md: "6" }}
           >
-            {/* Large Icon */}
-            <Box className="relative">
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${accentColors[accentColor]} blur-3xl opacity-30`}
-              ></div>
-              <Flex
-                align="center"
-                justify="center"
-                className="relative w-24 h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-3xl transition-transform duration-200 group-hover:scale-105"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(107, 163, 208, 0.1), rgba(107, 163, 208, 0.05))",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(107, 163, 208, 0.2)",
-                }}
-              >
-                <Icon
-                  size={56}
-                  className={`${iconColors[accentColor]} md:w-16 md:h-16 lg:w-18 lg:h-18`}
-                  strokeWidth={1.2}
-                />
-              </Flex>
-            </Box>
+            {domain}
+          </span>
 
-            {/* Logo/Title */}
-            <Heading
-              size={{ initial: "6", md: "7", lg: "8" }}
-              className="font-light text-center transition-colors duration-200"
-              style={{ color: "var(--text-contrast)" }}
-            >
-              {title}
-            </Heading>
-
-            {/* View Project Button */}
-            <Button size="2" variant="soft" className="mt-2">
-              View Project
-              <ArrowUpRight size={14} />
-            </Button>
-          </Flex>
-        </Card>
-      </Box>
-
-      {/* Content Side */}
-      <Flex
-        direction="column"
-        gap={{ initial: "4", md: "5" }}
-        className="w-full md:w-1/2 px-4 md:px-0"
-      >
-        <Box>
-          <Heading
-            size={{ initial: "6", md: "7", lg: "8" }}
-            className="font-light mb-4 md:mb-6"
-            style={{ letterSpacing: "-0.02em" }}
+          {/* TR - kind */}
+          <span
+            className="absolute mono"
+            style={{
+              top: 14,
+              right: 16,
+              fontSize: 10.5,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "var(--fg-subtle)",
+            }}
           >
-            {title}
-          </Heading>
+            Logomark
+          </span>
 
-          {/* Tags */}
-          {tags && (
-            <Flex gap="2" wrap="wrap" className="mt-2">
-              {tags.map((tag, index) => (
-                <Box
-                  key={index}
-                  className="px-3 py-1 rounded-full text-xs"
-                  style={{
-                    background: "rgba(107, 163, 208, 0.1)",
-                    border: "1px solid rgba(107, 163, 208, 0.2)",
-                    color: "var(--brand-blue)",
-                  }}
+          {/* Logo */}
+          <div className="absolute inset-0 flex items-center justify-center px-10">
+            {logoSrc?.endsWith(".svg") ? (
+              <svg viewBox="0 0 120 80" style={{ width: "62%", maxWidth: 280 }}>
+                <text
+                  x="50%"
+                  y="62"
+                  textAnchor="middle"
+                  fontFamily="'Geist', sans-serif"
+                  fontWeight="300"
+                  fontSize="64"
+                  letterSpacing="-2"
                 >
-                  {tag}
-                </Box>
-              ))}
-            </Flex>
-          )}
-        </Box>
+                  <tspan fill={accent}>[</tspan>
+                  <tspan fill="#ededed">re</tspan>
+                  <tspan fill={accent}>]</tspan>
+                </text>
+              </svg>
+            ) : (
+              <img
+                src={logoSrc}
+                alt={`${title} logo`}
+                style={{ width: "62%", maxWidth: 240, objectFit: "contain" }}
+              />
+            )}
+          </div>
 
-        <Text
-          size={{ initial: "3", md: "4" }}
-          style={{ color: "var(--text-faded)", lineHeight: "1.8" }}
+          {/* Hairline above footer row */}
+          <span
+            aria-hidden="true"
+            className="absolute"
+            style={{
+              left: 16,
+              right: 16,
+              bottom: 36,
+              height: 1,
+              background: "var(--line)",
+            }}
+          />
+
+          {/* BL - swatch + hex */}
+          <span
+            className="absolute mono inline-flex items-center gap-2"
+            style={{
+              bottom: 14,
+              left: 16,
+              fontSize: 10.5,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "var(--fg-subtle)",
+            }}
+          >
+            <span
+              aria-hidden="true"
+              style={{
+                width: 7,
+                height: 7,
+                borderRadius: "50%",
+                background: accent,
+                display: "inline-block",
+                boxShadow: `0 0 10px ${withAlpha(accentBase, 0.45)}`,
+              }}
+            />
+            {accent.toUpperCase()}
+          </span>
+
+          {/* BR - index, swaps to Visit on hover */}
+          <span
+            className="absolute mono"
+            style={{
+              bottom: 14,
+              right: 16,
+              fontSize: 10.5,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "var(--fg-subtle)",
+            }}
+          >
+            <span className="inline-flex items-center gap-1 transition-opacity duration-200 group-hover:opacity-0">
+              {index} / Product
+            </span>
+            <span
+              className="absolute inset-0 inline-flex items-center justify-end gap-1 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+              style={{ color: "var(--fg)" }}
+            >
+              Visit
+              <ArrowUpRight size={12} />
+            </span>
+          </span>
+        </a>
+      </div>
+
+      {/* ── Right: content ──────────────────────────────── */}
+      <div className="md:col-span-7">
+        <h2
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+            fontWeight: 400,
+            letterSpacing: "-0.035em",
+            lineHeight: 1.04,
+            color: "var(--fg)",
+            margin: 0,
+          }}
+        >
+          {title}
+        </h2>
+
+        <p
+          className="mono"
+          style={{
+            marginTop: 12,
+            fontSize: 11.5,
+            color: "var(--fg-subtle)",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+          }}
+        >
+          {role}
+        </p>
+
+        <p
+          style={{
+            marginTop: 28,
+            fontSize: "1.125rem",
+            lineHeight: 1.45,
+            color: "var(--fg)",
+            letterSpacing: "-0.015em",
+            maxWidth: "44ch",
+          }}
+        >
+          {tagline}
+        </p>
+
+        <p
+          style={{
+            marginTop: 16,
+            fontSize: "0.9625rem",
+            lineHeight: 1.65,
+            color: "var(--fg-muted)",
+            maxWidth: "54ch",
+          }}
         >
           {description}
-        </Text>
+        </p>
 
-        {/* Features List */}
-        <Box className="space-y-2 md:space-y-3 mt-2">
-          <Text
-            size={{ initial: "1", md: "2" }}
-            weight="medium"
-            style={{
-              color: "var(--text-contrast)",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-            }}
-          >
-            Key Features
-          </Text>
-          <Flex direction="column" gap={{ initial: "2", md: "3" }}>
-            {features.map((feature, index) => (
-              <Flex key={index} gap="3" align="start">
+        {/* Stats */}
+        {stats?.length > 0 && (
+          <div className="mt-10 flex flex-wrap gap-x-12 gap-y-6">
+            {stats.map((s) => (
+              <div key={s.label}>
                 <div
-                  className={`w-1 h-1 rounded-full ${
-                    accentColor === "blue"
-                      ? "bg-blue-400"
-                      : accentColor === "cyan"
-                      ? "bg-cyan-400"
-                      : accentColor === "slate"
-                      ? "bg-slate-400"
-                      : "bg-sky-400"
-                  } mt-2 flex-shrink-0`}
-                ></div>
-                <Text
-                  size={{ initial: "2", md: "3" }}
-                  style={{ color: "var(--gray-11)", lineHeight: "1.6" }}
+                  className="mono"
+                  style={{
+                    fontSize: "1.25rem",
+                    color: "var(--fg)",
+                    fontWeight: 500,
+                    letterSpacing: "-0.025em",
+                    lineHeight: 1,
+                  }}
                 >
-                  {feature}
-                </Text>
-              </Flex>
+                  {s.value}
+                </div>
+                <div
+                  className="mono"
+                  style={{
+                    marginTop: 8,
+                    fontSize: 10,
+                    color: "var(--fg-subtle)",
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {s.label}
+                </div>
+              </div>
             ))}
-          </Flex>
-        </Box>
+          </div>
+        )}
 
-        {/* Action Buttons */}
-        <Flex gap="3" className="mt-4 md:mt-6" wrap="wrap">
-          {websiteUrl && (
-            <Box
-              onClick={() => window.open(websiteUrl, "_blank")}
-              className="cursor-pointer px-6 py-3 rounded-lg transition-all duration-300 hover:translate-y-[-2px]"
+        {/* Features */}
+        <ul
+          className="mt-10"
+          style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 12 }}
+        >
+          {features.map((f) => (
+            <li
+              key={f}
               style={{
-                background:
-                  "linear-gradient(135deg, rgba(107, 163, 208, 0.2), rgba(107, 163, 208, 0.1))",
-                border: "1px solid rgba(107, 163, 208, 0.3)",
+                display: "flex",
+                gap: 14,
+                color: "var(--fg-muted)",
+                fontSize: "0.9375rem",
+                lineHeight: 1.55,
               }}
             >
-              <Flex align="center" gap="2">
-                <Text
-                  size="3"
-                  weight="medium"
-                  style={{ color: "var(--brand-blue)" }}
-                >
-                  Visit Site
-                </Text>
-                <ExternalLink
-                  size={16}
-                  style={{ color: "var(--brand-blue)" }}
-                />
-              </Flex>
-            </Box>
-          )}
+              <span
+                className="mono shrink-0"
+                style={{ color: accentBase, fontSize: 12, paddingTop: 4, opacity: 0.9 }}
+                aria-hidden="true"
+              >
+                ＋
+              </span>
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
 
+        {/* Actions */}
+        <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a
+            href={websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Visit {title}
+            <ArrowUpRight size={15} />
+          </a>
           {githubUrl && (
-            <Box
-              onClick={() => window.open(githubUrl, "_blank")}
-              className="cursor-pointer px-6 py-3 rounded-lg transition-all duration-300 hover:translate-y-[-2px]"
-              style={{
-                background: "rgba(255, 255, 255, 0.05)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-              }}
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="quiet inline-flex items-center gap-2"
+              style={{ fontSize: 14 }}
             >
-              <Flex align="center" gap="2">
-                <Github size={16} style={{ color: "var(--text-faded)" }} />
-                <Text
-                  size="3"
-                  weight="medium"
-                  style={{ color: "var(--text-faded)" }}
-                >
-                  GitHub
-                </Text>
-              </Flex>
-            </Box>
+              <Github size={14} />
+              Source
+            </a>
           )}
-        </Flex>
-      </Flex>
-    </Flex>
+        </div>
+      </div>
+    </article>
   );
 }
